@@ -1,9 +1,10 @@
 <script>
 	import Logo from '$lib/emblem-white.svg';
-	import ResourceCard from '$lib/components/ResourceCard.svelte';
-	export let data;
 
-	console.log(data.session);
+	export let data;
+	export let pageTitle;
+
+	// console.log(data.session);
 
 	const resources = [
 		{
@@ -243,25 +244,25 @@
 					>
 						<!-- Heroicon name: outline/home -->
 						<svg
-							class="flex-shrink-0 w-6 h-6 mr-3 text-sparkBody"
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
 							stroke="currentColor"
-							aria-hidden="true"
+							class="flex-shrink-0 w-6 h-6 mr-3 text-sparkBody"
 						>
 							<path
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z"
+								d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
 							/>
 						</svg>
-						Resources
+
+						Dashboard
 					</a>
 
 					<a
-						href="#"
+						href="/resources"
 						class="flex items-center px-2 py-2 font-medium rounded-md text-sparkHeader hover:bg-sparkOrange/60 hover:bg-opacity-85 hover:text-sparkHeader group"
 					>
 						<!-- Heroicon name: outline/chart-bar -->
@@ -280,7 +281,7 @@
 								d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
 							/>
 						</svg>
-						Future cool shit
+						Resources
 					</a>
 				</nav>
 			</div>
@@ -303,7 +304,13 @@
 						</svg>
 					</div>
 					<div class="ml-3">
-						<p class="text-sm font-medium text-sparkBody">{data.session.user.email}</p>
+						{#if !data?.session?.user}
+							<p class="text-sm font-medium text-sparkBody">
+								{data.session.user.user_metadata.full_name}
+							</p>
+						{:else}
+							<p class="text-sm font-medium text-sparkBody">{data.session.user.email}</p>
+						{/if}
 						<form action="/logout" method="POST">
 							<button
 								type="submit"
@@ -344,13 +351,9 @@
 		<main class="flex-1">
 			<div class="py-6">
 				<div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
-					<h1 class="text-5xl font-semibold text-sparkHeader font-display">Resources</h1>
+					<h1 class="text-5xl font-semibold text-sparkHeader font-display">{pageTitle}</h1>
 				</div>
-				<section class="grid xl:grid-cols-3 gap-6 px-4 mx-auto mt-8 max-w-7xl sm:px-6 md:px-8">
-					{#each resources as resource}
-						<ResourceCard {resource} />
-					{/each}
-				</section>
+				<slot />
 			</div>
 		</main>
 	</div>

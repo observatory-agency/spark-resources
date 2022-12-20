@@ -2,13 +2,14 @@
 	import Dashboard from '$lib/components/Dashboard.svelte';
 	import fullLogo from '$lib/logo-full.svg';
 	import Hero from '$lib/assets/hero.png';
+
 	export let data;
 </script>
 
 {#if data.session}
-	<Dashboard {data} />
+	<Dashboard {data} pageTitle="Dashboard" />
 {:else}
-	<div class="bg-sparkPeach">
+	<div class="bg-white">
 		<!-- Hero section -->
 		<div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
 			<div
@@ -139,15 +140,15 @@
 								src="https://res.cloudinary.com/observatory-agency/image/upload/f_auto/q_auto/c_crop,w_1056,h_1056,g_face/v1/clients/spark-strategies/courtney.jpg?_a=ATO2BcY0"
 								alt=""
 							/>
-							<div class="absolute inset-0 bg-sparkRaspberry mix-blend-multiply" />
+							<div class="absolute inset-0 bg-sparkRaspberry/70 mix-blend-multiply" />
 							<div
-								class="absolute inset-0 bg-gradient-to-t from-sparkRaspberry via-sparkRaspberry opacity-90"
+								class="absolute inset-0 bg-gradient-to-t from-sparkRaspberry via-sparkRaspberry opacity-30"
 							/>
 							<div class="relative px-8">
 								<blockquote class="mt-8">
 									<div class="relative text-lg font-medium text-white md:flex-grow">
 										<svg
-											class="absolute top-0 left-0 w-8 h-8 transform -translate-x-3 -translate-y-2 text-sparkPink"
+											class="absolute top-0 left-0 w-8 h-8 transform -translate-x-3 -translate-y-2 text-sparkRaspberry/90"
 											fill="currentColor"
 											viewBox="0 0 32 32"
 											aria-hidden="true"
@@ -242,27 +243,27 @@
 						</p>
 					</div>
 					<div class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
-						<div class="flex justify-center col-span-1 px-8 py-8 bg-white">
+						<div class="flex justify-center col-span-1 px-8 py-8 bg-sparkPeach">
 							<img class="h-12" src="/logos/soul-sweat.png" alt="Soul Sweat Logo" />
 						</div>
 
-						<div class="flex justify-center col-span-1 px-8 py-8 bg-white">
+						<div class="flex justify-center col-span-1 px-8 py-8 bg-sparkPeach">
 							<img class="h-12" src="/logos/breathe-together-yoga.png" alt="Mirage" />
 						</div>
 
-						<div class="flex justify-center col-span-1 px-8 py-8 bg-white">
+						<div class="flex justify-center col-span-1 px-8 py-8 bg-sparkPeach">
 							<img class="max-h-12" src="/logos/earth-aerial-yoga.png" alt="Tuple" />
 						</div>
 
-						<div class="flex justify-center col-span-1 px-8 py-8 bg-white">
+						<div class="flex justify-center col-span-1 px-8 py-8 bg-sparkPeach">
 							<img class="max-h-10" src="/logos/nest-yoga.png" alt="Laravel" />
 						</div>
 
-						<div class="flex justify-center col-span-1 px-8 py-8 bg-white">
+						<div class="flex justify-center col-span-1 px-8 py-8 bg-sparkPeach">
 							<img class="max-h-12" src="/logos/spark-hot-yoga.png" alt="StaticKit" />
 						</div>
 
-						<div class="flex justify-center col-span-1 px-8 py-8 bg-white">
+						<div class="flex justify-center col-span-1 px-8 py-8 bg-sparkPeach">
 							<img class="max-h-10" src="/logos/modo-yoga.png" alt="Workcation" />
 						</div>
 					</div>

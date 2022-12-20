@@ -10,7 +10,7 @@
 			name: 'Desk Staff Analysis',
 			category: 'Spreadsheet',
 			description: 'A utility-first CSS framework for rapidly building custom user interfaces.',
-			img: '/spreadsheet.png',
+			img: '/resources/spreadsheet.png',
 			url: 'https://docs.google.com/spreadsheets/d/10lkfNbcNjCy51f-Cs8FiItcd5IScIlZvz1aum4FBejE/edit#gid=0'
 		},
 		{
@@ -18,7 +18,7 @@
 			category: 'Document',
 			description:
 				'Completely unstyled, fully accessible UI components, designed to integrate beautifully.',
-			img: '/resource.jpg',
+			img: '/resources/document.jpg',
 			url: 'https://docs.google.com/document/d/14bHlLMFRhzcq9Q8r_HkBpiZIzgtGBrPvsKcEAoNlqQ0/edit'
 		},
 		{
@@ -26,14 +26,14 @@
 			category: 'PDF',
 			description:
 				'A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.',
-			img: '/pdf.png',
+			img: '/resources/pdf.png',
 			url: 'https://drive.google.com/file/d/1G8ZjUjZTp2-3OZKOfr_ksy5Oo1OrPpQJ/view?ts=63a0e921'
 		},
 		{
 			name: 'Profit First for Fitness Studios',
 			category: 'Video',
 			description: 'A rugged, minimal framework for composing JavaScript behavior in your markup.',
-			img: '/resource.jpg',
+			img: '/resources/video.png',
 			url: 'https://drive.google.com/file/d/1CWVzprmNQjWXMpsK-b0QxD-k6dz2T3lK/view?ts=63a0e8be'
 		}
 	];
@@ -41,7 +41,7 @@
 
 <div>
 	<!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
-	<div class="relative z-40 md:hidden" role="dialog" aria-modal="true">
+	<div class="relative z-40 hidden" role="dialog" aria-modal="true">
 		<!--
         Off-canvas menu backdrop, show/hide based on off-canvas menu state.
 
@@ -127,7 +127,7 @@
 									d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
 								/>
 							</svg>
-							Dashboard
+							Resources
 						</a>
 
 						<a
@@ -238,7 +238,7 @@
 				<nav class="flex-1 px-2 mt-6 space-y-2">
 					<!-- Current: "bg-sparkBlue text-sparkHeader", Default: "text-sparkHeader hover:bg-sparkBlue hover:bg-opacity-85 hover:text-sparkPeach" -->
 					<a
-						href="#"
+						href="/"
 						class="flex items-center px-2 py-2 font-medium rounded-md bg-sparkOrange/70 text-sparkHeader group"
 					>
 						<!-- Heroicon name: outline/home -->
@@ -254,38 +254,15 @@
 							<path
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-							/>
-						</svg>
-						Dashboard
-					</a>
-
-					<a
-						href="#"
-						class="flex items-center px-2 py-2 font-medium rounded-md text-sparkHeader hover:bg-sparkBlue hover:bg-opacity-85 hover:text-sparkPeach group"
-					>
-						<!-- Heroicon name: outline/inbox -->
-						<svg
-							class="flex-shrink-0 w-6 h-6 mr-3 text-sparkBody"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
 								d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z"
 							/>
 						</svg>
-						Documents
+						Resources
 					</a>
 
 					<a
 						href="#"
-						class="flex items-center px-2 py-2 font-medium rounded-md text-sparkHeader hover:bg-sparkBlue hover:bg-opacity-85 hover:text-sparkPeach group"
+						class="flex items-center px-2 py-2 font-medium rounded-md text-sparkHeader hover:bg-sparkOrange/60 hover:bg-opacity-85 hover:text-sparkHeader group"
 					>
 						<!-- Heroicon name: outline/chart-bar -->
 						<svg
@@ -303,7 +280,7 @@
 								d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
 							/>
 						</svg>
-						Reports
+						Future cool shit
 					</a>
 				</nav>
 			</div>
@@ -340,10 +317,10 @@
 		</div>
 	</div>
 	<div class="flex flex-col flex-1 md:pl-64">
-		<div class="sticky top-0 z-10 pt-1 pl-1 bg-gray-100 sm:pl-3 sm:pt-3 md:hidden">
+		<div class="sticky top-0 z-10 pt-1 pl-1 sm:pl-3 sm:pt-3 md:hidden">
 			<button
 				type="button"
-				class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+				class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-sparkHeader hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sparkBlue"
 			>
 				<span class="sr-only">Open sidebar</span>
 				<!-- Heroicon name: outline/bars-3 -->
@@ -369,7 +346,7 @@
 				<div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
 					<h1 class="text-5xl font-semibold text-sparkHeader font-display">Resources</h1>
 				</div>
-				<section class="grid grid-cols-3 gap-8 px-4 mx-auto mt-8 max-w-7xl sm:px-6 md:px-8">
+				<section class="grid xl:grid-cols-3 gap-6 px-4 mx-auto mt-8 max-w-7xl sm:px-6 md:px-8">
 					{#each resources as resource}
 						<ResourceCard {resource} />
 					{/each}

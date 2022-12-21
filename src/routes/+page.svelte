@@ -4,6 +4,8 @@
 	import Hero from '$lib/assets/hero.png';
 
 	export let data;
+
+	$: console.log(data.session);
 </script>
 
 {#if data.session}
@@ -134,7 +136,7 @@
 						class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20"
 					>
 						<!-- Testimonial card-->
-						<div class="relative pt-72 pb-10 overflow-hidden shadow-xl rounded-2xl">
+						<div class="relative pb-10 overflow-hidden shadow-xl pt-72 rounded-2xl">
 							<img
 								class="absolute inset-0 object-cover w-full"
 								src="https://res.cloudinary.com/observatory-agency/image/upload/f_auto/q_auto/c_crop,w_1056,h_1056,g_face/v1/clients/spark-strategies/courtney.jpg?_a=ATO2BcY0"

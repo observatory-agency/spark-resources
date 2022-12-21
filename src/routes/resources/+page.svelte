@@ -17,5 +17,5 @@
 		{/if}
 	</Dashboard>
 {:else}
-	<p>login motherfucker!</p>
+	<p>login please</p>
 {/if}

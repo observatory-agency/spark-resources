@@ -1,43 +1,10 @@
 <script>
 	import Logo from '$lib/emblem-white.svg';
-
+	import LogoFull from '$lib/logo-full.svg';
 	export let data;
 	export let pageTitle;
 
-	// console.log(data.session);
-
-	const resources = [
-		{
-			name: 'Desk Staff Analysis',
-			category: 'Spreadsheet',
-			description: 'A utility-first CSS framework for rapidly building custom user interfaces.',
-			img: '/resources/spreadsheet.png',
-			url: 'https://docs.google.com/spreadsheets/d/10lkfNbcNjCy51f-Cs8FiItcd5IScIlZvz1aum4FBejE/edit#gid=0'
-		},
-		{
-			name: 'Member Engagement Practices',
-			category: 'Document',
-			description:
-				'Completely unstyled, fully accessible UI components, designed to integrate beautifully.',
-			img: '/resources/document.jpg',
-			url: 'https://docs.google.com/document/d/14bHlLMFRhzcq9Q8r_HkBpiZIzgtGBrPvsKcEAoNlqQ0/edit'
-		},
-		{
-			name: 'Yoga Advisor Manual',
-			category: 'PDF',
-			description:
-				'A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.',
-			img: '/resources/pdf.png',
-			url: 'https://drive.google.com/file/d/1G8ZjUjZTp2-3OZKOfr_ksy5Oo1OrPpQJ/view?ts=63a0e921'
-		},
-		{
-			name: 'Profit First for Fitness Studios',
-			category: 'Video',
-			description: 'A rugged, minimal framework for composing JavaScript behavior in your markup.',
-			img: '/resources/video.png',
-			url: 'https://drive.google.com/file/d/1CWVzprmNQjWXMpsK-b0QxD-k6dz2T3lK/view?ts=63a0e8be'
-		}
-	];
+	// console.log(data.session)
 </script>
 
 <div>
@@ -237,50 +204,25 @@
 					<img src={Logo} alt="Spark Strategies Icon" class="w-16" />
 				</div>
 				<nav class="flex-1 px-2 mt-6 space-y-2">
-					<!-- Current: "bg-sparkBlue text-sparkHeader", Default: "text-sparkHeader hover:bg-sparkBlue hover:bg-opacity-85 hover:text-sparkPeach" -->
-					<a
-						href="/"
-						class="flex items-center px-2 py-2 font-medium rounded-md bg-sparkOrange/70 text-sparkHeader group"
-					>
-						<!-- Heroicon name: outline/home -->
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="flex-shrink-0 w-6 h-6 mr-3 text-sparkBody"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-							/>
-						</svg>
-
-						Dashboard
-					</a>
-
 					<a
 						href="/resources"
-						class="flex items-center px-2 py-2 font-medium rounded-md text-sparkHeader hover:bg-sparkOrange/60 hover:bg-opacity-85 hover:text-sparkHeader group"
+						class="flex items-center px-2 py-2 font-medium rounded-md bg-sparkOrange/70 text-sparkHeader group"
 					>
-						<!-- Heroicon name: outline/chart-bar -->
 						<svg
-							class="flex-shrink-0 w-6 h-6 mr-3 text-sparkBody"
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
 							stroke="currentColor"
-							aria-hidden="true"
+							class="flex-shrink-0 w-6 h-6 mr-3 text-sparkBody"
 						>
 							<path
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+								d="M7.875 14.25l1.214 1.942a2.25 2.25 0 001.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 011.872 1.002l.164.246a2.25 2.25 0 001.872 1.002h2.092a2.25 2.25 0 001.872-1.002l.164-.246A2.25 2.25 0 0116.954 9h4.636M2.41 9a2.25 2.25 0 00-.16.832V12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 01.382-.632l3.285-3.832a2.25 2.25 0 011.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0021.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 002.25 2.25z"
 							/>
 						</svg>
+
 						Resources
 					</a>
 				</nav>
@@ -304,7 +246,7 @@
 						</svg>
 					</div>
 					<div class="ml-3">
-						{#if !data?.session?.user}
+						{#if data?.session?.user?.user_metadata?.full_name}
 							<p class="text-sm font-medium text-sparkBody">
 								{data.session.user.user_metadata.full_name}
 							</p>
@@ -324,13 +266,13 @@
 		</div>
 	</div>
 	<div class="flex flex-col flex-1 md:pl-64">
-		<div class="sticky top-0 z-10 pt-1 pl-1 sm:pl-3 sm:pt-3 md:hidden">
-			<button
+		<div class="pt-2 pl-4 sm:pl-3 sm:pt-3 md:hidden">
+			<img src={LogoFull} alt="Spark Strategies Icon" class="w-32" />
+			<!-- <button
 				type="button"
 				class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-sparkHeader hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sparkBlue"
 			>
 				<span class="sr-only">Open sidebar</span>
-				<!-- Heroicon name: outline/bars-3 -->
 				<svg
 					class="w-6 h-6"
 					xmlns="http://www.w3.org/2000/svg"
@@ -346,7 +288,7 @@
 						d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
 					/>
 				</svg>
-			</button>
+			</button> -->
 		</div>
 		<main class="flex-1">
 			<div class="py-6">

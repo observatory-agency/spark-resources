@@ -51,11 +51,11 @@
 						</div>
 						<div class="mt-6 sm:max-w-xl">
 							<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-								Sign up for our sick ass resource center!
+								Spark: Knowledge with our Resource Center!
 							</h1>
 							<p class="mt-4 text-xl text-gray-500">
-								Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-								commodo.
+								We continually update our Resource Center with spreadsheets, guides, templates and
+								videos to keep your business running smoothly. The best part? It's 100% free.
 							</p>
 						</div>
 						<div class="flex mt-8">
@@ -75,20 +75,17 @@
 							<blockquote>
 								<div>
 									<p class="text-base text-gray-500">
-										This is the coolest fuckin collection of docs i've ever read!
+										"I just started working on this and it is absolutely packed with value. I can't
+										believe how much it's filled with. Thank you for your work!"
 									</p>
 								</div>
 								<footer class="mt-3">
 									<div class="flex items-center space-x-3">
 										<div class="flex-shrink-0">
-											<img
-												class="w-6 h-6 rounded-full"
-												src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-												alt=""
-											/>
+											<img class="w-8 h-8 rounded-full" src="/dayna-e.jpg" alt="Dayna E headshot" />
 										</div>
 										<div class="text-base font-medium text-gray-700">
-											Marcia Hill, Digital Marketing Manager
+											Dayna E., on the 5 Day Profitable Studio Masterclass
 										</div>
 									</div>
 								</footer>
@@ -122,7 +119,7 @@
 
 		<!-- Testimonial/stats section -->
 		<div class="relative mt-20">
-			<div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
+			<div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-center lg:gap-24 lg:px-8">
 				<div class="relative sm:py-16 lg:py-0">
 					<div
 						aria-hidden="true"
@@ -139,12 +136,12 @@
 						<div class="relative pb-10 overflow-hidden shadow-xl pt-72 rounded-2xl">
 							<img
 								class="absolute inset-0 object-cover w-full"
-								src="https://res.cloudinary.com/observatory-agency/image/upload/f_auto/q_auto/c_crop,w_1056,h_1056,g_face/v1/clients/spark-strategies/courtney.jpg?_a=ATO2BcY0"
+								src="/resource-callout.jpg"
 								alt=""
 							/>
-							<div class="absolute inset-0 bg-sparkRaspberry/70 mix-blend-multiply" />
+							<div class="absolute inset-0 bg-sparkRaspberry mix-blend-multiply" />
 							<div
-								class="absolute inset-0 bg-gradient-to-t from-sparkRaspberry via-sparkRaspberry opacity-30"
+								class="absolute inset-0 bg-gradient-to-t from-sparkRaspberry via-sparkRaspberry opacity-20"
 							/>
 							<div class="relative px-8">
 								<blockquote class="mt-8">
@@ -182,20 +179,21 @@
 					<!-- Content area -->
 					<div class="pt-12 sm:pt-16 lg:pt-20">
 						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							On a mission to empower teams
+							We're on a mission to empower heart-led leaders.
 						</h2>
 						<div class="mt-6 space-y-6 text-gray-500">
 							<p class="text-lg">
-								Business coaching doesn't need to be a lifetime commitment. We partner with you,
-								define your BIG goals, uncover your business' most pressing needs -- then get to
-								work: fast! After we address any bottlenecks or inefficiencies, quantum growth is
-								our goal. Our results speak for themselves!
+								Spark Strategies was built from a deep need for professionalization in the industry
+								we love the most. We believe that every female entrepreneur deserves the knowledge
+								and tools required to run a business that not only survives - but thrives! Inside
+								this library, you'll find the very best of what we know about running a boutique
+								studio business. The best part? It's on us.
 							</p>
 						</div>
 					</div>
 
 					<!-- Stats section -->
-					<div class="mt-10">
+					<!-- <div class="mt-10">
 						<dl class="grid grid-cols-2 gap-x-4 gap-y-8">
 							<div class="pt-6 border-t-2 border-gray-100">
 								<dt class="text-base font-medium text-gray-500">Founded</dt>
@@ -224,7 +222,7 @@
 								>Learn more about how we're changing the world&nbsp&rarr;</a
 							>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -238,10 +236,9 @@
 							Trusted by our clients
 						</h2>
 						<p class="max-w-3xl mt-6 text-lg leading-7 text-gray-500">
-							Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed
-							consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi.
-							Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames
-							senectus vitae.
+							To date, Spark Strategies has served hundreds of boutique fitness and wellness
+							businesses. Our clients include large franchises, appointment-based businesses,
+							class-based studios, mom and pop shops, and everything in between.
 						</p>
 					</div>
 					<div class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
@@ -305,8 +302,7 @@
 								Get notified when we release new resources
 							</h2>
 							<p class="max-w-2xl mx-auto mt-6 text-lg text-rose-100">
-								Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed
-								consectetur neque tristique pellentesque.
+								Leave your email here and you'll be the first to know when a new resource drops!
 							</p>
 						</div>
 						<form

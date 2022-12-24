@@ -47,29 +47,11 @@
 					</div>
 				</div>
 
-				<div class="flex items-center justify-between">
-					<div class="flex items-center">
-						<input
-							id="remember-me"
-							name="remember-me"
-							type="checkbox"
-							class="w-4 h-4 border-gray-300 rounded text-sparkRaspberry focus:ring-sparkRaspberry"
-						/>
-						<label for="remember-me" class="block ml-2 text-sm text-gray-900">Remember me</label>
-					</div>
-
-					<div class="text-sm">
-						<a href="#" class="font-medium text-sparkRaspberry hover:text-[#DA1B28]"
-							>Forgot your password?</a
-						>
-					</div>
-				</div>
-
 				<div>
 					<button
 						type="submit"
 						class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-sparkRaspberry hover:bg-[#DA1B28] focus:outline-none focus:ring-2 focus:ring-sparkRaspberry focus:ring-offset-2"
-						>Sign in</button
+						>Create account</button
 					>
 				</div>
 			</form>

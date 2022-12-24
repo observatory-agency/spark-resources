@@ -9,7 +9,14 @@
 </script>
 
 {#if data.session}
-	<Dashboard {data} pageTitle="Dashboard" />
+	<Dashboard {data} pageTitle="Dashboard">
+		<section class="px-8 mx-auto mt-6 max-w-7xl">
+			<p>
+				Head over to our <a href="/resources" class="text-lg underline text-sparkBlue">Resources!</a
+				>
+			</p>
+		</section>
+	</Dashboard>
 {:else}
 	<div class="bg-white">
 		<!-- Hero section -->

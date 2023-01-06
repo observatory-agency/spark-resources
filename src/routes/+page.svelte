@@ -5,7 +5,8 @@
 
 	export let data;
 
-	$: console.log(data.session);
+	let mostRecentName = data.story.content.body[0].Name;
+	let mostRecentCategory = data.story.content.body[0].Category;
 </script>
 
 {#if data.session}
@@ -30,7 +31,7 @@
 					</a>
 					<div class="mt-16">
 						<div>
-							<a href="#" class="inline-flex space-x-4">
+							<div class="inline-flex space-x-4">
 								<span
 									class="rounded bg-rose-50 px-2.5 py-1 text-sm font-semibold text-sparkRaspberry"
 									>What's new</span
@@ -38,7 +39,7 @@
 								<span
 									class="inline-flex items-center space-x-1 text-sm font-medium text-sparkRaspberry"
 								>
-									<span>New doc released! How to sell shit</span>
+									<span>New {mostRecentCategory} released! {mostRecentName}</span>
 									<!-- Heroicon name: mini/chevron-right -->
 									<svg
 										class="w-5 h-5"
@@ -54,7 +55,7 @@
 										/>
 									</svg>
 								</span>
-							</a>
+							</div>
 						</div>
 						<div class="mt-6 sm:max-w-xl">
 							<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">

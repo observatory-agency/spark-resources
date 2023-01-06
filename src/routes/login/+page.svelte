@@ -97,21 +97,12 @@
 							</div>
 						</div>
 
-						<div class="flex items-center justify-between">
-							<div class="flex items-center">
-								<input
-									id="remember-me"
-									name="remember-me"
-									type="checkbox"
-									class="w-4 h-4 border-gray-300 rounded text-sparkRaspberry focus:ring-sparkRaspberry"
-								/>
-								<label for="remember-me" class="block ml-2 text-sm text-gray-900">Remember me</label
-								>
-							</div>
-
+						<div class="flex items-center justify-center">
 							<div class="text-sm">
-								<a href="#" class="font-medium text-sparkRaspberry hover:text-[#DA1B28]"
-									>Forgot your password?</a
+								<a
+									href="mailto:support@sparkstrategies.co"
+									class="font-medium text-center text-sparkRaspberry hover:text-[#DA1B28]"
+									>Forgot your password? Shoot us an email!</a
 								>
 							</div>
 						</div>

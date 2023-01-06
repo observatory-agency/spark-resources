@@ -5,10 +5,10 @@
 
 <div
 	use:storyblokEditable={blok}
-	class="transition duration-300 ease-in-out transform rounded-lg hover:shadow-xl hover:scale-[1.01] hover:translate-x-1.5 hover:translate-y-1.5"
+	class="transition duration-300 assCheese ease-in-out transform rounded-lg hover:shadow-xl hover:scale-[1.01] hover:translate-x-1.5 hover:translate-y-1.5"
 >
 	<a href={blok.Link.url} target="_blank" rel="noreferrer">
-		<div class="overflow-hidden bg-white divide-y divide-gray-200 rounded-lg shadow">
+		<div class="overflow-hidden bg-white divide-y divide-gray-200 rounded-lg shadow h-full">
 			<div>
 				<img
 					src={blok.Image.filename}

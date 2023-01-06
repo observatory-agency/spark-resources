@@ -7,7 +7,8 @@ export const actions = {
 
 		if (provider) {
 			const { data, error: err } = await locals.sb.auth.signInWithOAuth({
-				provider: provider
+				provider: provider,
+				redirectTo: 'https://resources.sparkstrategies.co/resources'
 			});
 			if (err) {
 				return fail(400, {
@@ -19,7 +20,7 @@ export const actions = {
 		}
 
 		const body = Object.fromEntries(await request.formData());
-		const { data, error: err } = await locals.sb.auth.signInWithPassword({
+		const { error: err } = await locals.sb.auth.signInWithPassword({
 			email: body.email,
 			password: body.password
 		});

@@ -290,7 +290,7 @@
 				</svg>
 			</button> -->
 		</div>
-		<main class="flex-1">
+		<main class="flex-1 bg-sparkPeach">
 			<div class="py-6">
 				<div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
 					<h1 class="text-5xl font-semibold text-sparkHeader font-display">{pageTitle}</h1>

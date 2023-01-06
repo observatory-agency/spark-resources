@@ -3,8 +3,6 @@
 	import LogoFull from '$lib/logo-full.svg';
 	export let data;
 	export let pageTitle;
-
-	// console.log(data.session)
 </script>
 
 <div>

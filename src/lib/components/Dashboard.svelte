@@ -1,201 +1,100 @@
 <script>
+	import { clickOutside } from '../utils/clickOutside.js';
+
 	import Logo from '$lib/emblem-white.svg';
 	import LogoFull from '$lib/logo-full.svg';
 	export let data;
 	export let pageTitle;
+
+	let sidebar = false;
 </script>
 
 <div>
-	<!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
-	<div class="relative z-40 hidden" role="dialog" aria-modal="true">
-		<!--
-        Off-canvas menu backdrop, show/hide based on off-canvas menu state.
-
-        Entering: "transition-opacity ease-linear duration-300"
-          From: "opacity-0"
-          To: "opacity-100"
-        Leaving: "transition-opacity ease-linear duration-300"
-          From: "opacity-100"
-          To: "opacity-0"
-      -->
-		<div class="fixed inset-0 bg-gray-600 bg-opacity-75" />
-
-		<div class="fixed inset-0 z-40 flex">
-			<!--
-          Off-canvas menu, show/hide based on off-canvas menu state.
-
-          Entering: "transition ease-in-out duration-300 transform"
-            From: "-translate-x-full"
-            To: "translate-x-0"
-          Leaving: "transition ease-in-out duration-300 transform"
-            From: "translate-x-0"
-            To: "-translate-x-full"
-        -->
-			<div class="relative flex flex-col flex-1 w-full max-w-xs bg-indigo-700">
-				<!--
-            Close button, show/hide based on off-canvas menu state.
-
-            Entering: "ease-in-out duration-300"
-              From: "opacity-0"
-              To: "opacity-100"
-            Leaving: "ease-in-out duration-300"
-              From: "opacity-100"
-              To: "opacity-0"
-          -->
-				<div class="absolute top-0 right-0 pt-2 -mr-12">
-					<button
-						type="button"
-						class="flex items-center justify-center w-10 h-10 ml-1 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-					>
-						<span class="sr-only">Close sidebar</span>
-						<!-- Heroicon name: outline/x-mark -->
-						<svg
-							class="w-6 h-6 text-sparkHeader"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							aria-hidden="true"
+	{#if sidebar}
+		<div class="relative z-40" role="dialog" aria-modal="true">
+			<div class="fixed inset-0 bg-gray-600 bg-opacity-75" />
+			<div class="fixed inset-0 z-40 flex">
+				<div class="relative flex flex-col flex-1 w-full max-w-xs bg-gradient">
+					<div class="absolute top-0 right-0 pt-2 -mr-12">
+						<button
+							type="button"
+							class="flex items-center justify-center w-10 h-10 ml-1 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+							on:click={() => {
+								sidebar = false;
+							}}
 						>
-							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-						</svg>
-					</button>
-				</div>
-
-				<div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
-					<div class="flex items-center flex-shrink-0 px-4">
-						<img
-							class="w-auto h-8"
-							src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
-							alt="Your Company"
-						/>
+							<span class="sr-only">Close sidebar</span>
+							<!-- Heroicon name: outline/x-mark -->
+							<svg
+								class="w-6 h-6 text-sparkHeader"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								aria-hidden="true"
+							>
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</button>
 					</div>
-					<nav class="px-2 mt-5 space-y-1">
-						<!-- Current: "bg-sparkBlue text-sparkHeader", Default: "text-sparkHeader hover:bg-sparkBlue hover:bg-opacity-85 hover:text-sparkPeach" -->
-						<a
-							href="#"
-							class="flex items-center px-2 py-2 text-base font-medium rounded-md bg-sparkBlue text-sparkHeader group"
-						>
-							<!-- Heroicon name: outline/home -->
-							<svg
-								class="flex-shrink-0 w-6 h-6 mr-4 text-sparkBody"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								aria-hidden="true"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-								/>
-							</svg>
-							Resources
-						</a>
 
-						<a
-							href="#"
-							class="flex items-center px-2 py-2 text-base font-medium rounded-md text-sparkHeader hover:bg-sparkBlue hover:bg-opacity-85 hover:text-sparkPeach group"
-						>
-							<!-- Heroicon name: outline/users -->
-							<svg
-								class="flex-shrink-0 w-6 h-6 mr-4 text-sparkBody"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								aria-hidden="true"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
-								/>
-							</svg>
-							Team
-						</a>
-
-						<a
-							href="#"
-							class="flex items-center px-2 py-2 text-base font-medium rounded-md text-sparkHeader hover:bg-sparkBlue hover:bg-opacity-85 hover:text-sparkPeach group"
-						>
-							<!-- Heroicon name: outline/folder -->
-							<svg
-								class="flex-shrink-0 w-6 h-6 mr-4 text-sparkBody"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								aria-hidden="true"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
-								/>
-							</svg>
-							Projects
-						</a>
-
-						<a
-							href="#"
-							class="flex items-center px-2 py-2 text-base font-medium rounded-md text-sparkHeader hover:bg-sparkBlue hover:bg-opacity-85 hover:text-sparkPeach group"
-						>
-							<!-- Heroicon name: outline/calendar -->
-							<svg
-								class="flex-shrink-0 w-6 h-6 mr-4 text-sparkBody"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								aria-hidden="true"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
-								/>
-							</svg>
-							Calendar
-						</a>
-					</nav>
-				</div>
-				<div class="flex flex-shrink-0 p-4 border-t border-indigo-800">
-					<a href="#" class="flex-shrink-0 block group">
-						<div class="flex items-center">
-							<div>
-								<img
-									class="inline-block w-10 h-10 rounded-full"
-									src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-									alt=""
-								/>
-							</div>
-							<div class="ml-3">
-								<p class="text-base font-medium text-sparkHeader">{data.session.user.email}</p>
-								<p class="text-sm font-medium text-indigo-200 group-hover:text-sparkHeader">
-									View profile
-								</p>
-							</div>
+					<div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+						<div class="flex items-center flex-shrink-0 px-4">
+							<img src={Logo} alt="Spark Strategies Icon" class="w-16" />
 						</div>
-					</a>
-				</div>
-			</div>
+						<nav class="px-2 mt-5 space-y-1">
+							<a
+								href="/resources"
+								class="flex items-center px-2 py-2 font-medium rounded-md bg-sparkOrange/70 text-sparkHeader group"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									class="flex-shrink-0 w-6 h-6 mr-3 text-sparkBody"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M7.875 14.25l1.214 1.942a2.25 2.25 0 001.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 011.872 1.002l.164.246a2.25 2.25 0 001.872 1.002h2.092a2.25 2.25 0 001.872-1.002l.164-.246A2.25 2.25 0 0116.954 9h4.636M2.41 9a2.25 2.25 0 00-.16.832V12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 01.382-.632l3.285-3.832a2.25 2.25 0 011.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0021.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 002.25 2.25z"
+									/>
+								</svg>
 
-			<div class="flex-shrink-0 w-14" aria-hidden="true">
-				<!-- Force sidebar to shrink to fit close icon -->
+								Resources
+							</a>
+						</nav>
+					</div>
+					<div class="flex flex-shrink-0 p-4 border-t border-sparkRaspberry/40">
+						<div>
+							{#if data?.session?.user?.user_metadata?.full_name}
+								<p class="text-sm font-medium text-sparkBody">
+									{data.session.user.user_metadata.full_name}
+								</p>
+							{:else}
+								<p class="text-sm font-medium text-sparkBody">{data.session.user.email}</p>
+							{/if}
+							<form action="/logout" method="POST">
+								<button
+									type="submit"
+									class="text-xs font-medium text-sparkHeader/90 group-hover:text-sparkHeader"
+									>Logout</button
+								>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="flex-shrink-0 w-14" aria-hidden="true">
+					<!-- Force sidebar to shrink to fit close icon -->
+				</div>
 			</div>
 		</div>
-	</div>
+	{/if}
 
 	<!-- Static sidebar for desktop -->
 	<div class="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
-		<!-- Sidebar component, swap this element with another sidebar if you like -->
 		<div class="flex flex-col flex-1 min-h-0 bg-gradient">
 			<div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto">
 				<div class="flex items-center flex-shrink-0 px-4">
@@ -264,11 +163,14 @@
 		</div>
 	</div>
 	<div class="flex flex-col flex-1 md:pl-64">
-		<div class="pt-2 pl-4 sm:pl-3 sm:pt-3 md:hidden">
+		<div class="flex justify-between pt-2 pl-4 sm:pl-3 sm:pt-3 md:hidden">
 			<img src={LogoFull} alt="Spark Strategies Icon" class="w-32" />
-			<!-- <button
+			<button
 				type="button"
 				class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-sparkHeader hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sparkBlue"
+				on:click={() => {
+					sidebar = true;
+				}}
 			>
 				<span class="sr-only">Open sidebar</span>
 				<svg
@@ -286,12 +188,14 @@
 						d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
 					/>
 				</svg>
-			</button> -->
+			</button>
 		</div>
 		<main class="flex-1 bg-sparkPeach">
 			<div class="py-6">
 				<div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
-					<h1 class="text-5xl font-semibold text-sparkHeader font-display">{pageTitle}</h1>
+					<h1 class="text-3xl font-semibold lg:text-5xl text-sparkHeader font-display">
+						{pageTitle}
+					</h1>
 				</div>
 				<slot />
 			</div>

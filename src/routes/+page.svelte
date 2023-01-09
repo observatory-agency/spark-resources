@@ -31,9 +31,9 @@
 					</a>
 					<div class="mt-16">
 						<div>
-							<div class="inline-flex space-x-4">
+							<div class="inline-flex sm:space-x-4">
 								<span
-									class="rounded bg-rose-50 px-2.5 py-1 text-sm font-semibold text-sparkRaspberry"
+									class="hidden sm:block rounded bg-rose-50 px-2.5 py-1 text-sm font-semibold text-sparkRaspberry"
 									>What's new</span
 								>
 								<span

@@ -323,8 +323,10 @@
 								<input
 									id="cta-email"
 									type="email"
+									name="email"
 									class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-rose-500"
 									placeholder="Enter your email"
+									required
 								/>
 							</div>
 							<div class="mt-4 sm:mt-0 sm:ml-3">

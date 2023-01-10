@@ -19,7 +19,7 @@ export const actions = {
 		}
 
 		const body = Object.fromEntries(await request.formData());
-		const { data, error: err } = await locals.sb.auth.signUp({
+		const { error: err } = await locals.sb.auth.signUp({
 			email: body.email,
 			password: body.password
 		});
@@ -31,7 +31,8 @@ export const actions = {
 				});
 			}
 			return fail(500, {
-				message: 'Server error: something went wrong'
+				message: 'Server error: something went wrong',
+				fuck: err.message
 			});
 		}
 

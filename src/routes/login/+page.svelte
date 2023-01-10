@@ -1,7 +1,12 @@
 <script>
 	import Logo from '$lib/logo.svg';
 	import signIn from '$lib/assets/sign-in.jpg';
+	export let form;
 </script>
+
+<svelte:head>
+	<title>Login | Spark Resources</title>
+</svelte:head>
 
 <div class="flex min-h-full">
 	<div
@@ -24,7 +29,8 @@
 			</div>
 
 			<div class="mt-8">
-				<div>
+				<!-- TODO: Fix google sign in -->
+				<!-- <div>
 					<div>
 						<p class="text-sm font-medium text-gray-700">Sign in with</p>
 
@@ -63,7 +69,7 @@
 							<span class="px-2 text-sparkHeader bg-sparkPeach">Or continue with</span>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="mt-6">
 					<form action="?/login" method="POST" class="space-y-6">
@@ -78,7 +84,7 @@
 									type="email"
 									autocomplete="email"
 									required
-									class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-sparkRaspberry focus:outline-none focus:ring-sparkRaspberry sm:text-sm"
+									class="block w-full px-3 py-2 placeholder-gray-400 border border-sparkHeader/70 rounded-md shadow-sm appearance-none focus:border-sparkRaspberry focus:outline-none focus:ring-sparkRaspberry"
 								/>
 							</div>
 						</div>
@@ -92,9 +98,35 @@
 									type="password"
 									autocomplete="current-password"
 									required
-									class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-sparkRaspberry focus:outline-none focus:ring-sparkRaspberry sm:text-sm"
+									class="block w-full px-3 py-2 placeholder-gray-400 border border-sparkHeader/70 rounded-md shadow-sm appearance-none focus:border-sparkRaspberry focus:outline-none focus:ring-sparkRaspberry"
 								/>
 							</div>
+							{#if form}
+								<p class="text-red-600 font-semibold" />
+								<div class="rounded-md bg-red-100 p-4">
+									<div class="flex">
+										<div class="flex-shrink-0">
+											<!-- Heroicon name: mini/x-circle -->
+											<svg
+												class="h-5 w-5 text-red-400"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 20 20"
+												fill="currentColor"
+												aria-hidden="true"
+											>
+												<path
+													fill-rule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+													clip-rule="evenodd"
+												/>
+											</svg>
+										</div>
+										<div class="ml-3">
+											<h3 class="text-sm font-medium text-red-800">{form.message}</h3>
+										</div>
+									</div>
+								</div>
+							{/if}
 						</div>
 
 						<div class="flex items-center justify-center">

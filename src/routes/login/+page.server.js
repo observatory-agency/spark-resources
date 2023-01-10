@@ -32,7 +32,8 @@ export const actions = {
 				});
 			}
 			return fail(500, {
-				message: 'Server error: something went wrong'
+				message: 'Server error: something went wrong',
+				fuck: err.message
 			});
 		}
 

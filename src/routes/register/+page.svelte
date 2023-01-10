@@ -1,7 +1,11 @@
 <script>
 	import Logo from '$lib/logo.svg';
+	export let form;
 </script>
 
+<svelte:head>
+	<title>Create an account | Spark Resources</title>
+</svelte:head>
 <div class="flex flex-col justify-center min-h-full py-12 sm:px-6 lg:px-8">
 	<div class="sm:mx-auto sm:w-full sm:max-w-md">
 		<a href="/">
@@ -20,7 +24,8 @@
 		<div class="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10">
 			<form class="space-y-6" action="?/register" method="POST">
 				<div>
-					<label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+					<label for="email" class="block text-sm font-medium text-sparkHeader">Email address</label
+					>
 					<div class="mt-1">
 						<input
 							id="email"
@@ -28,13 +33,13 @@
 							type="email"
 							autocomplete="email"
 							required
-							class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-sparkRaspberry focus:outline-none focus:ring-sparkRaspberry sm:text-sm"
+							class="block w-full px-3 py-2 placeholder-gray-400 border border-sparkHeader/70 rounded-md shadow-sm appearance-none focus:border-sparkRaspberry focus:outline-none focus:ring-sparkRaspberry"
 						/>
 					</div>
 				</div>
 
 				<div>
-					<label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+					<label for="password" class="block text-sm font-medium text-sparkHeader">Password</label>
 					<div class="mt-1">
 						<input
 							id="password"
@@ -42,24 +47,52 @@
 							type="password"
 							autocomplete="current-password"
 							required
-							class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-sparkRaspberry focus:outline-none focus:ring-sparkRaspberry sm:text-sm"
+							placeholder="Must be at least 6 characters"
+							class="block w-full px-3 py-2 placeholder-gray-400 border border-sparkHeader/70 rounded-md shadow-sm appearance-none focus:border-sparkRaspberry focus:outline-none focus:ring-sparkRaspberry"
 						/>
 					</div>
+					{#if form}
+						<p class="text-red-600 font-semibold" />
+						<div class="rounded-md bg-red-50 p-4 mt-3">
+							<div class="flex">
+								<div class="flex-shrink-0">
+									<!-- Heroicon name: mini/x-circle -->
+									<svg
+										class="h-5 w-5 text-red-400"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 20 20"
+										fill="currentColor"
+										aria-hidden="true"
+									>
+										<path
+											fill-rule="evenodd"
+											d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+								</div>
+								<div class="ml-3">
+									<h3 class="font-medium text-red-800">{form.fuck}</h3>
+								</div>
+							</div>
+						</div>
+					{/if}
 				</div>
 
 				<div>
 					<button
 						type="submit"
-						class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-sparkRaspberry hover:bg-[#DA1B28] focus:outline-none focus:ring-2 focus:ring-sparkRaspberry focus:ring-offset-2"
+						class="flex justify-center w-full px-4 py-2 font-medium text-white border border-transparent rounded-md shadow-sm bg-sparkRaspberry hover:bg-[#DA1B28] focus:outline-none focus:ring-2 focus:ring-sparkRaspberry focus:ring-offset-2"
 						>Create account</button
 					>
 				</div>
 			</form>
 
-			<div class="mt-6">
+			<!-- TODO: Fix google register -->
+			<!-- <div class="mt-6">
 				<div class="relative">
 					<div class="absolute inset-0 flex items-center">
-						<div class="w-full border-t border-gray-300" />
+						<div class="w-full border-t border-sparkHeader/70" />
 					</div>
 					<div class="relative flex justify-center text-sm">
 						<span class="px-2 text-gray-500 bg-white">Or continue with</span>
@@ -70,7 +103,7 @@
 					<form method="POST">
 						<button
 							formaction="?/register&provider=google"
-							class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50"
+							class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-sparkHeader/70 rounded-md shadow-sm hover:bg-gray-50"
 						>
 							<span class="sr-only">Sign in with Google</span>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -91,7 +124,7 @@
 						</button>
 					</form>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>

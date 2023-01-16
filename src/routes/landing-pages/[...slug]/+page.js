@@ -6,7 +6,7 @@ export async function load({ params, parent }) {
 		path += slug;
 	}
 	const dataStory = await storyblokApi.get(path, {
-		version: 'published'
+		version: 'draft'
 	});
 	return {
 		story: dataStory.data.story

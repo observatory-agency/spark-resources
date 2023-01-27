@@ -13,7 +13,7 @@
 	<title>{data.story.name} | Spark Strategies</title>
 </svelte:head>
 
-<div>
+<div class="bg-sparkPeach">
 	{#if data.story}
 		<StoryblokComponent blok={data.story.content} />
 	{/if}

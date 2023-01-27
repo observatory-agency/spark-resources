@@ -5,7 +5,7 @@
 	$: resolvedRichText = renderRichText(blok.description);
 </script>
 
-<section use:storyblokEditable={blok} class="px-4 mx-auto max-w-7xl">
+<section use:storyblokEditable={blok} class="px-4 mx-auto max-w-screen-2xl">
 	<div class="relative px-6 lg:px-8">
 		<div class="grid grid-cols-12 gap-16">
 			<div class="col-span-6 space-y-6">

@@ -5,12 +5,12 @@
 
 <section use:storyblokEditable={blok} class="max-w-6xl px-4 mx-auto">
 	<div class="pt-24 sm:pt-32 lg:pt-40">
-		<div class="max-w-md px-6 mx-auto text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
+		<div class="max-w-md px-6 mx-auto text-center sm:max-w-3xl lg:max-w-screen-2xl lg:px-8">
 			<div>
-				<h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+				<h2 class="mt-2 text-3xl font-bold tracking-tight text-sparkHeader sm:text-4xl">
 					{blok.title}
 				</h2>
-				<p class="mx-auto mt-5 text-xl text-gray-600 max-w-prose">
+				<p class="mx-auto mt-5 text-xl text-sparkBody/80 max-w-prose">
 					{blok.description}
 				</p>
 			</div>

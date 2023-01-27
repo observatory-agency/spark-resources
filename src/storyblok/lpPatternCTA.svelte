@@ -31,16 +31,16 @@
 				</div>
 				<div class="relative flex flex-col items-center space-y-10">
 					<div class="sm:text-center">
-						<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+						<h2 class="text-3xl font-bold tracking-tight text-sparkPeach sm:text-4xl">
 							{blok.title}
 						</h2>
-						<p class="max-w-2xl mx-auto mt-4 text-lg text-rose-100">
+						<p class="max-w-2xl mx-auto mt-4 text-lg text-sparkPeach/90">
 							{blok.description}
 						</p>
 					</div>
 					<a
 						href={blok.button_link}
-						class="inline-block px-5 py-3 mx-auto text-base font-medium text-white bg-gray-900 border border-transparent rounded-md shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-rose-500 sm:px-10"
+						class="inline-block px-5 py-3 mx-auto text-base font-medium border border-transparent rounded-md shadow bg-sparkBlue text-sparkPeach hover:bg-sparkBlueDark focus:outline-none focus:ring-2 focus:ring-sparkPeach focus:ring-offset-2 focus:ring-offset-sparkRaspberry sm:px-10"
 						>{blok.button_text}</a
 					>
 				</div>

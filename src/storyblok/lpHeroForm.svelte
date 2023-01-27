@@ -25,7 +25,7 @@
 				{/if}
 				<p>{blok.form_description}</p>
 			</div>
-			<form action={blok.form_id} method="POST" class="space-y-6">
+			<form action="https://formspree.io/f/{blok.form_id}" method="POST" class="space-y-6">
 				<div>
 					<label for="name" class="block text-sm font-medium text-left text-gray-700">Name</label>
 					<div class="mt-1">

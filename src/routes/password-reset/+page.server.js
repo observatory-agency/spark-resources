@@ -5,7 +5,7 @@ export const actions = {
 	reset: async ({ request, locals }) => {
 		const body = Object.fromEntries(await request.formData());
 		const { error: err } = await locals.sb.auth.resetPasswordForEmail(body.email, {
-			redirectTo: 'https://resources.sparkstrategies.co/update-password'
+			redirectTo: 'https://resources.sparkstrategies.co/password-reset-success'
 		});
 
 		if (err) {

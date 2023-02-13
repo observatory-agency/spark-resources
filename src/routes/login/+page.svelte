@@ -132,9 +132,9 @@
 						<div class="flex items-center justify-center">
 							<div class="text-sm">
 								<a
-									href="mailto:support@sparkstrategies.co"
+									href="/password-reset"
 									class="font-medium text-center text-sparkRaspberry hover:text-[#DA1B28]"
-									>Forgot your password? Shoot us an email!</a
+									>Forgot your password?</a
 								>
 							</div>
 						</div>

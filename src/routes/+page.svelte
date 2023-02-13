@@ -314,7 +314,7 @@
 							</p>
 						</div>
 						<form
-							action="https://formspree.io/f/xoqzawey"
+							action="https://formspree.io/f/xzbqeoeg"
 							method="POST"
 							class="mt-12 sm:mx-auto sm:flex sm:max-w-lg"
 						>

@@ -2,8 +2,6 @@
 	import Logo from '$lib/logo.svg';
 	import signIn from '$lib/assets/sign-in.jpg';
 	export let form;
-
-	console.log(form);
 </script>
 
 <svelte:head>
@@ -26,6 +24,11 @@
 				</p>
 			</div>
 
+			{#if form}
+				<div class="mt-4">
+					<p>sick!</p>
+				</div>
+			{/if}
 			<div class="mt-8">
 				<div class="mt-6">
 					<form action="?/reset" method="POST" class="space-y-6">

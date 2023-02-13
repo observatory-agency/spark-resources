@@ -20,7 +20,8 @@
 					<img src={Logo} alt="Spark Strategies logo" class="w-16" />
 				</a>
 				<h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900">Create a new password</h2>
-				<p class="mt-2 text-sm text-gray-600">Please create a new password</p>
+				<p class="mt-2 text-sm text-gray-600">Please create a new password.</p>
+				<p class="mt-2 text-gray-600">Make sure you clicked on the link in your email!</p>
 			</div>
 
 			<div class="mt-8">

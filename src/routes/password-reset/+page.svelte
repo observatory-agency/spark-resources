@@ -24,11 +24,6 @@
 				</p>
 			</div>
 
-			{#if form}
-				<div class="mt-4">
-					<p>sick!</p>
-				</div>
-			{/if}
 			<div class="mt-8">
 				<div class="mt-6">
 					<form action="?/reset" method="POST" class="space-y-6">

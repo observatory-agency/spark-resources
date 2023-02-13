@@ -4,7 +4,9 @@ import { fail, redirect } from '@sveltejs/kit';
 export const actions = {
 	update: async ({ request, locals }) => {
 		const body = Object.fromEntries(await request.formData());
-		const { error: err } = await locals.sb.auth.updateUser(body.password);
+		const { error: err } = await locals.sb.auth.updateUser({
+			password: body.password
+		});
 
 		if (err) {
 			if (err instanceof AuthApiError && err.status === 400) {

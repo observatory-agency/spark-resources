@@ -4,8 +4,8 @@
 </script>
 
 <section use:storyblokEditable={blok}>
-	<div class="relative mt-24 sm:mt-32 sm:py-16">
-		<div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+	<div class="relative sm:py-16">
+		<div class="md:max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
 			<div
 				class="relative px-6 py-10 overflow-hidden shadow-xl rounded-2xl bg-sparkRaspberry sm:px-12 sm:py-20"
 			>
@@ -31,16 +31,16 @@
 				</div>
 				<div class="relative flex flex-col items-center space-y-10">
 					<div class="sm:text-center">
-						<h2 class="text-3xl font-bold tracking-tight text-sparkPeach sm:text-4xl">
+						<h2 class="text-2xl font-bold tracking-tight text-sparkPeach sm:text-4xl">
 							{blok.title}
 						</h2>
-						<p class="max-w-2xl mx-auto mt-4 text-lg text-sparkPeach/90">
+						<p class="max-w-2xl mx-auto leading-normal mt-4 lg:text-lg text-sparkPeach/90">
 							{blok.description}
 						</p>
 					</div>
 					<a
 						href={blok.button_link.url}
-						class="inline-block px-5 py-3 mx-auto text-base font-medium border border-transparent rounded-md shadow bg-sparkBlue text-sparkPeach hover:bg-sparkBlueDark focus:outline-none focus:ring-2 focus:ring-sparkPeach focus:ring-offset-2 focus:ring-offset-sparkRaspberry sm:px-10"
+						class="inline-block px-5 py-3 mx-auto text-base font-medium border border-transparent rounded-md shadow bg-sparkOrange text-sparkPeach hover:bg-sparkOrange/90 focus:outline-none focus:ring-2 focus:ring-sparkPeach focus:ring-offset-2 focus:ring-offset-sparkRaspberry sm:px-10"
 						>{blok.button_text}</a
 					>
 				</div>

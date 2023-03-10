@@ -5,15 +5,15 @@
 	$: resolvedRichText = renderRichText(blok.description);
 </script>
 
-<section use:storyblokEditable={blok} class="px-4 mx-auto max-w-screen-2xl">
+<section use:storyblokEditable={blok} class="px-4 mx-auto max-w-7xl ">
 	<div class="relative px-6 lg:px-8">
-		<div class="grid grid-cols-12 gap-16">
+		<div class="lg:grid grid-cols-12 max-sm:space-y-8 gap-16">
 			<div class="col-span-6 space-y-6">
 				<div>
 					<h1 class="mt-2 text-xl font-bold tracking-tight text-sparkHeader sm:text-3xl">
 						{blok.title}
 					</h1>
-					<p class="mt-6 text-lg text-sparkBody/80">
+					<p class="mt-6 text-sparkBody/80 prose prose-lg">
 						{@html resolvedRichText}
 					</p>
 				</div>
@@ -24,7 +24,11 @@
 				>
 			</div>
 			<div class="col-span-6">
-				<img src={blok.image.filename} alt={blok.title} class="rounded-lg shadow-lg" />
+				<img
+					src={blok.image.filename}
+					alt={blok.title}
+					class="rounded-lg shadow-lg w-full max-h-[696px] object-cover object-center"
+				/>
 			</div>
 		</div>
 	</div>

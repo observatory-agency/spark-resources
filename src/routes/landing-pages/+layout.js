@@ -9,6 +9,7 @@ import lpSectionHeader from '$storyblok/lpSectionHeader.svelte';
 import lpFeatureTextImage from '$storyblok/lpFeatureTextImage.svelte';
 import lpVideoSection from '$storyblok/lpVideoSection.svelte';
 import lpPatternCTA from '$storyblok/lpPatternCTA.svelte';
+import lpFeatureList from '$storyblok/lpFeatureList.svelte';
 
 export async function load() {
 	storyblokInit({
@@ -24,6 +25,7 @@ export async function load() {
 			lp_feature_text_image: lpFeatureTextImage,
 			lp_video_section: lpVideoSection,
 			lp_cta_pattern: lpPatternCTA,
+			lp_feature_list: lpFeatureList,
 			LandingPage: LandingPage
 		}
 	});

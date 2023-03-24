@@ -18,7 +18,7 @@
 					</p>
 				</div>
 				<a
-					href={blok.button_link}
+					href={blok.button_link.url}
 					class="inline-block max-w-[200px] mx-auto px-6 py-3 text-base font-medium text-center text-white border border-transparent rounded-md shadow bg-sparkRaspberry hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:px-10"
 					>{blok.button_text}</a
 				>

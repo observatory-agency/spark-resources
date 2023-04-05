@@ -4,7 +4,7 @@
 </script>
 
 <section use:storyblokEditable={blok} class="max-w-6xl px-4 mx-auto">
-	<div class="pt-24 sm:pt-32 lg:pt-40">
+	<div class="pt-12 {blok.spacing === 'small' ? 'sm:pt-16' : 'sm:pt-32'}">
 		<div class="max-w-md px-6 mx-auto text-center sm:max-w-3xl lg:max-w-screen-2xl lg:px-8">
 			<div>
 				<h2 class="mt-2 text-3xl font-bold tracking-tight text-sparkHeader sm:text-4xl">

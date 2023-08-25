@@ -3,6 +3,7 @@ import lpHeroForm from '$storyblok/lpHeroForm.svelte';
 import LandingPage from '$storyblok/LandingPage.svelte';
 import lpSimpleHero from '$storyblok/lpSimpleHero.svelte';
 import lpCardGrid from '$storyblok/lpCardGrid.svelte';
+import lpFeatureLargeImage from '$storyblok/lpFeatureLargeImage.svelte';
 import lpSimpleCard from '$storyblok/lpSimpleCard.svelte';
 import lpIconCard from '$storyblok/lpIconCard.svelte';
 import lpSectionHeader from '$storyblok/lpSectionHeader.svelte';
@@ -26,6 +27,7 @@ export async function load() {
 			lp_video_section: lpVideoSection,
 			lp_cta_pattern: lpPatternCTA,
 			lp_feature_list: lpFeatureList,
+			lp_feature_large_image: lpFeatureLargeImage,
 			LandingPage: LandingPage
 		}
 	});

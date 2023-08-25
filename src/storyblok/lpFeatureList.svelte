@@ -5,10 +5,10 @@
 	$: resolvedRichText = renderRichText(blok.intro);
 </script>
 
-<section use:storyblokEditable={blok} class="px-4 relative mx-auto spark-bg py-24 sm:py-32">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section use:storyblokEditable={blok} class="relative px-4 py-24 mx-auto spark-bg sm:py-32">
+	<div class="px-6 mx-auto max-w-7xl lg:px-8">
 		<div
-			class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-6"
+			class="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-6"
 		>
 			<div class="col-span-3">
 				<h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -19,12 +19,12 @@
 				</p>
 			</div>
 			<dl
-				class="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-4"
+				class="grid grid-cols-1 col-span-3 text-base leading-7 text-gray-600 gap-x-8 gap-y-10 sm:grid-cols-2 lg:gap-y-4"
 			>
 				<div class="relative pl-9">
 					<dt class="font-semibold text-gray-900">
 						<svg
-							class="absolute top-1 left-0 h-5 w-5 text-sparkRaspberry"
+							class="absolute left-0 w-5 h-5 top-1 text-sparkRaspberry"
 							viewBox="0 0 20 20"
 							fill="currentColor"
 							aria-hidden="true"
@@ -42,7 +42,7 @@
 				<div class="relative pl-9">
 					<dt class="font-semibold text-gray-900">
 						<svg
-							class="absolute top-1 left-0 h-5 w-5 text-sparkRaspberry"
+							class="absolute left-0 w-5 h-5 top-1 text-sparkRaspberry"
 							viewBox="0 0 20 20"
 							fill="currentColor"
 							aria-hidden="true"
@@ -60,7 +60,7 @@
 				<div class="relative pl-9">
 					<dt class="font-semibold text-gray-900">
 						<svg
-							class="absolute top-1 left-0 h-5 w-5 text-sparkRaspberry"
+							class="absolute left-0 w-5 h-5 top-1 text-sparkRaspberry"
 							viewBox="0 0 20 20"
 							fill="currentColor"
 							aria-hidden="true"
@@ -78,7 +78,7 @@
 				<div class="relative pl-9">
 					<dt class="font-semibold text-gray-900">
 						<svg
-							class="absolute top-1 left-0 h-5 w-5 text-sparkRaspberry"
+							class="absolute left-0 w-5 h-5 top-1 text-sparkRaspberry"
 							viewBox="0 0 20 20"
 							fill="currentColor"
 							aria-hidden="true"

@@ -1,4 +1,4 @@
-import { c as create_ssr_component, h as compute_rest_props, v as validate_component, m as missing_component } from "./index.js";
+import { c as create_ssr_component, h as compute_rest_props, v as validate_component, m as missing_component } from "./index2.js";
 import { g as getComponent } from "./index3.js";
 const StoryblokComponent = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["blok"]);
@@ -12,7 +12,7 @@ const StoryblokComponent = create_ssr_component(($$result, $$props, $$bindings, 
   if ($$props.blok === void 0 && $$bindings.blok && blok !== void 0)
     $$bindings.blok(blok);
   return `
-${validate_component(component || missing_component, "svelte:component").$$render($$result, Object.assign({ blok }, $$restProps), {}, {})}`;
+${validate_component(component || missing_component, "svelte:component").$$render($$result, Object.assign({}, { blok }, $$restProps), {}, {})}`;
 });
 export {
   StoryblokComponent as S

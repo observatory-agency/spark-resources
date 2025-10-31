@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
+import { c as create_ssr_component, v as validate_component } from "../../../chunks/index2.js";
 import { D as Dashboard } from "../../../chunks/Dashboard.js";
 import "../../../chunks/index3.js";
 import { S as StoryblokComponent } from "../../../chunks/StoryblokComponent.js";
@@ -16,7 +16,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 	'https://connect.facebook.net/en_US/fbevents.js');
 	fbq('init', '317938509119198');
 	fbq('track', 'PageView');
-	<\/script><noscript><img height="${"1"}" width="${"1"}" style="${"display:none"}" src="${"https://www.facebook.com/tr?id=317938509119198&ev=PageView&noscript=1"}"></noscript><!-- HEAD_svelte-1qf5lbx_END -->`, ""}
+	<\/script><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=317938509119198&ev=PageView&noscript=1"></noscript><!-- HEAD_svelte-1qf5lbx_END -->`, ""}
 
 ${data.session ? `${validate_component(Dashboard, "Dashboard").$$render($$result, { data, pageTitle: "Resources" }, {}, {
     default: () => {

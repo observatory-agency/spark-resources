@@ -1,7 +1,5 @@
 <script>
-	import { clickOutside } from '../utils/clickOutside.js';
-
-	import Logo from '$lib/emblem-white.svg';
+	import Logo from '$lib/logo-resources.svg';
 	import LogoFull from '$lib/logo-full.svg';
 	export let data;
 	export let pageTitle;
@@ -12,9 +10,9 @@
 <div>
 	{#if sidebar}
 		<div class="relative z-40" role="dialog" aria-modal="true">
-			<div class="fixed inset-0 bg-gray-600 bg-opacity-75" />
+			<div class="fixed inset-0 bg-fadedBlack bg-opacity-75" />
 			<div class="fixed inset-0 z-40 flex">
-				<div class="relative flex flex-col flex-1 w-full max-w-xs bg-gradient">
+				<div class="relative flex flex-col flex-1 w-full max-w-xs bg-fadedBlack">
 					<div class="absolute top-0 right-0 pt-2 -mr-12">
 						<button
 							type="button"
@@ -41,12 +39,12 @@
 
 					<div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
 						<div class="flex items-center flex-shrink-0 px-4">
-							<img src={Logo} alt="Spark Strategies Icon" class="w-16" />
+							<img src={Logo} alt="Spark Strategies Icon" class="w-24" />
 						</div>
 						<nav class="px-2 mt-5 space-y-1">
 							<a
 								href="/resources"
-								class="flex items-center px-2 py-2 font-medium rounded-md bg-sparkOrange/70 text-sparkHeader group"
+								class="flex items-center px-2 py-2 font-medium rounded-md bg-neonGreen/70 text-fadedBlack group"
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +52,7 @@
 									viewBox="0 0 24 24"
 									stroke-width="1.5"
 									stroke="currentColor"
-									class="flex-shrink-0 w-6 h-6 mr-3 text-sparkBody"
+									class="flex-shrink-0 w-6 h-6 mr-3 text-fadedBlack"
 								>
 									<path
 										stroke-linecap="round"
@@ -67,19 +65,19 @@
 							</a>
 						</nav>
 					</div>
-					<div class="flex flex-shrink-0 p-4 border-t border-sparkRaspberry/40">
+					<div class="flex flex-shrink-0 p-4 border-t border-fadedBlack/40">
 						<div>
 							{#if data?.session?.user?.user_metadata?.full_name}
-								<p class="text-sm font-medium text-sparkBody">
+								<p class="text-sm font-medium text-fadedBlack">
 									{data.session.user.user_metadata.full_name}
 								</p>
 							{:else}
-								<p class="text-sm font-medium text-sparkBody">{data.session.user.email}</p>
+								<p class="text-sm font-medium text-fadedBlack">{data.session.user.email}</p>
 							{/if}
 							<form action="/logout" method="POST">
 								<button
 									type="submit"
-									class="text-xs font-medium text-sparkHeader/90 group-hover:text-sparkHeader"
+									class="text-xs font-medium text-fadedBlack/90 group-hover:text-fadedBlack"
 									>Logout</button
 								>
 							</form>
@@ -95,15 +93,15 @@
 
 	<!-- Static sidebar for desktop -->
 	<div class="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
-		<div class="flex flex-col flex-1 min-h-0 bg-gradient">
+		<div class="flex flex-col flex-1 min-h-0 bg-fadedBlack">
 			<div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto">
 				<div class="flex items-center flex-shrink-0 px-4">
-					<img src={Logo} alt="Spark Strategies Icon" class="w-16" />
+					<img src={Logo} alt="Spark Strategies Icon" class="w-40" />
 				</div>
 				<nav class="flex-1 px-2 mt-6 space-y-2">
 					<a
 						href="/resources"
-						class="flex items-center px-2 py-2 font-medium rounded-md bg-sparkOrange/70 text-sparkHeader group"
+						class="flex items-center px-2 py-2 font-medium rounded-md bg-neonGreen/90 text-fadedBlack group"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +109,7 @@
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
 							stroke="currentColor"
-							class="flex-shrink-0 w-6 h-6 mr-3 text-sparkBody"
+							class="flex-shrink-0 w-6 h-6 mr-3 text-fadedBlack"
 						>
 							<path
 								stroke-linecap="round"
@@ -124,8 +122,8 @@
 					</a>
 				</nav>
 			</div>
-			<div class="flex flex-shrink-0 p-4 border-t border-sparkHeader/30">
-				<div class="flex items-center">
+			<div class="flex flex-shrink-0 p-4 border-t border-fadedBlack/30">
+				<div class="flex items-center text-warmWhite">
 					<div>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -144,16 +142,16 @@
 					</div>
 					<div class="ml-3">
 						{#if data?.session?.user?.user_metadata?.full_name}
-							<p class="text-sm font-medium text-sparkBody">
+							<p class="text-sm font-medium text-warmWhite">
 								{data.session.user.user_metadata.full_name}
 							</p>
 						{:else}
-							<p class="text-sm font-medium text-sparkBody">{data.session.user.email}</p>
+							<p class="font-medium text-warmWhite">{data.session.user.email}</p>
 						{/if}
 						<form action="/logout" method="POST">
 							<button
 								type="submit"
-								class="text-xs font-medium text-sparkHeader/90 group-hover:text-sparkHeader"
+								class="text-sm font-medium text-warmWhite/90 group-hover:text-warmWhite"
 								>Logout</button
 							>
 						</form>
@@ -167,7 +165,7 @@
 			<img src={LogoFull} alt="Spark Strategies Icon" class="w-32" />
 			<button
 				type="button"
-				class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-sparkHeader hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sparkBlue"
+				class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-fadedBlack hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-fadedBlack"
 				on:click={() => {
 					sidebar = true;
 				}}
@@ -190,10 +188,10 @@
 				</svg>
 			</button>
 		</div>
-		<main class="flex-1 bg-sparkPeach">
+		<main class="flex-1 bg-warmWhite">
 			<div class="py-6">
 				<div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
-					<h1 class="text-3xl font-semibold lg:text-5xl text-sparkHeader font-display">
+					<h1 class="text-3xl font-semibold lg:text-5xl text-fadedBlack font-display">
 						{pageTitle}
 					</h1>
 				</div>
@@ -202,18 +200,3 @@
 		</main>
 	</div>
 </div>
-
-<style>
-	.bg-gradient {
-		background: linear-gradient(
-			to bottom,
-			#e84853,
-			#e85852,
-			#e86650,
-			#e8734f,
-			#e87f4d,
-			#e78b4b,
-			#e69649
-		);
-	}
-</style>

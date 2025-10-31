@@ -1,7 +1,8 @@
-import { getServerSession } from "@supabase/auth-helpers-sveltekit";
-async function load(event) {
+async function load({ locals, depends }) {
+  depends("supabase:auth");
+  const session = await locals.getSession();
   return {
-    session: await getServerSession(event)
+    session
   };
 }
 export {

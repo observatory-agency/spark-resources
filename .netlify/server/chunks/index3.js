@@ -1,5 +1,4 @@
 import e from "axios";
-import "./index.js";
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
 var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
@@ -316,6 +315,11 @@ class RichTextResolver {
     return this.marks[item.type](item);
   }
 }
+/*!
+ * storyblok-js-client v4.5.2
+ * Universal JavaScript SDK for Storyblok's API
+ * (c) 2020-2022 Stobylok Team
+ */
 function t(e2) {
   return typeof e2 == "number" && (e2 == e2 && e2 !== 1 / 0 && e2 !== -1 / 0);
 }
@@ -730,9 +734,7 @@ const renderRichText = (data, options, resolverInstance) => {
 let storyblokApiInstance = null;
 const useStoryblokApi = () => {
   if (!storyblokApiInstance) {
-    console.log(
-      `You can't use getStoryblokApi if you're not loading apiPlugin.`
-    );
+    console.log(`You can't use getStoryblokApi if you're not loading apiPlugin.`);
   }
   return storyblokApiInstance;
 };

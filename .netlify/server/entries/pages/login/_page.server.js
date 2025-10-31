@@ -1,10 +1,10 @@
 import { AuthApiError } from "@supabase/supabase-js";
-import { f as fail, r as redirect } from "../../../chunks/index2.js";
+import { f as fail, r as redirect } from "../../../chunks/index.js";
 const actions = {
   login: async ({ request, locals, url }) => {
     const provider = url.searchParams.get("provider");
     if (provider) {
-      const { data, error: err2 } = await locals.sb.auth.signInWithOAuth({
+      const { data, error: err2 } = await locals.supabase.auth.signInWithOAuth({
         provider,
         redirectTo: "https://resources.sparkstrategies.co/resources"
       });
@@ -16,7 +16,7 @@ const actions = {
       throw redirect(303, data.url);
     }
     const body = Object.fromEntries(await request.formData());
-    const { error: err } = await locals.sb.auth.signInWithPassword({
+    const { error: err } = await locals.supabase.auth.signInWithPassword({
       email: body.email,
       password: body.password
     });

@@ -19,10 +19,8 @@
 				<a href="/">
 					<img src={Logo} alt="Spark Strategies logo" class="w-16" />
 				</a>
-				<h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900">
-					Password reset email sent!
-				</h2>
-				<p class="mt-2 text-sm text-gray-600">
+				<h2 class="mt-6 text-3xl text-fadedBlack text-pretty">Password reset email sent!</h2>
+				<p class="mt-2 text-fadedBlack text-pretty">
 					Check your inbox and click the link to create a new password
 				</p>
 			</div>

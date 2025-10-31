@@ -2,40 +2,40 @@ import { AuthApiError } from '@supabase/supabase-js';
 import { fail, redirect } from '@sveltejs/kit';
 
 export const actions = {
-	register: async ({ request, locals, url }) => {
-		const provider = url.searchParams.get('provider');
+    register: async ({ request, locals, url }) => {
+        const provider = url.searchParams.get('provider');
 
-		if (provider) {
-			const { data, error: err } = await locals.sb.auth.signInWithOAuth({
-				provider: provider
-			});
-			if (err) {
-				return fail(400, {
-					message: 'Invalid email or password'
-				});
-			}
+        if (provider) {
+            const { data, error: err } = await locals.supabase.auth.signInWithOAuth({
+                provider: provider
+            });
+            if (err) {
+                return fail(400, {
+                    message: 'Invalid email or password'
+                });
+            }
 
-			throw redirect(303, data.url);
-		}
+            throw redirect(303, data.url);
+        }
 
-		const body = Object.fromEntries(await request.formData());
-		const { error: err } = await locals.sb.auth.signUp({
-			email: body.email,
-			password: body.password
-		});
+        const body = Object.fromEntries(await request.formData());
+        const { error: err } = await locals.supabase.auth.signUp({
+            email: body.email,
+            password: body.password
+        });
 
-		if (err) {
-			if (err instanceof AuthApiError && err.status === 400) {
-				return fail(400, {
-					message: 'Invalid email or password'
-				});
-			}
-			return fail(500, {
-				message: 'Server error: something went wrong',
-				fuck: err.message
-			});
-		}
+        if (err) {
+            if (err instanceof AuthApiError && err.status === 400) {
+                return fail(400, {
+                    message: 'Invalid email or password'
+                });
+            }
+            return fail(500, {
+                message: 'Server error: something went wrong',
+                fuck: err.message
+            });
+        }
 
-		throw redirect(303, '/register-success');
-	}
+        throw redirect(303, '/register-success');
+    }
 };

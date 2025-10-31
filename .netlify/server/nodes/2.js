@@ -1,9 +1,10 @@
 import * as universal from '../entries/pages/landing-pages/_layout.js';
 
 export const index = 2;
-export const component = async () => (await import('../entries/pages/landing-pages/_layout.svelte.js')).default;
-export const file = '_app/immutable/components/pages/landing-pages/_layout.svelte-5bf59541.js';
+let component_cache;
+export const component = async () => component_cache ??= (await import('../entries/pages/landing-pages/_layout.svelte.js')).default;
 export { universal };
-export const imports = ["_app/immutable/components/pages/landing-pages/_layout.svelte-5bf59541.js","_app/immutable/chunks/index-00f13575.js","_app/immutable/modules/pages/landing-pages/_layout.js-e502d6c8.js","_app/immutable/chunks/index-37ba46af.js","_app/immutable/chunks/_commonjsHelpers-725317a4.js","_app/immutable/chunks/index-00f13575.js","_app/immutable/chunks/_layout-fa235a87.js","_app/immutable/chunks/StoryblokComponent-972bcaf7.js"];
-export const stylesheets = ["_app/immutable/assets/styles-18ab528d.css","_app/immutable/assets/_layout-dd13b79a.css"];
+export const universal_id = "src/routes/landing-pages/+layout.js";
+export const imports = ["_app/immutable/nodes/2.f02de89f.js","_app/immutable/chunks/index.77dbd728.js","_app/immutable/chunks/_commonjsHelpers.668aeb87.js","_app/immutable/chunks/index.4ea1fc30.js","_app/immutable/chunks/StoryblokComponent.7cbef8c5.js"];
+export const stylesheets = ["_app/immutable/assets/2.dd13b79a.css","_app/immutable/assets/styles.e16c25b6.css"];
 export const fonts = [];

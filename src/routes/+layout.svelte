@@ -1,14 +1,20 @@
 <script>
-	import { invalidateAll } from '$app/navigation';
+	import { invalidate } from '$app/navigation';
 	import { supabase } from '$lib/supabase';
 	import { onMount } from 'svelte';
 	import '../styles.css';
 
+	export let data;
+
+	$: ({ session } = data);
+
 	onMount(() => {
 		const {
 			data: { subscription }
-		} = supabase.auth.onAuthStateChange(() => {
-			invalidateAll();
+		} = supabase.auth.onAuthStateChange((_event, session) => {
+			if (session?.expires_at !== data?.session?.expires_at) {
+				invalidate('supabase:auth');
+			}
 		});
 
 		return () => {
@@ -25,6 +31,6 @@
 	/>
 </svelte:head>
 
-<main class="h-full bg-sparkPeach">
+<main class="h-full bg-warmWhite">
 	<slot />
 </main>

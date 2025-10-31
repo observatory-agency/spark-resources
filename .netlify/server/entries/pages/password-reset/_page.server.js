@@ -1,9 +1,9 @@
 import { AuthApiError } from "@supabase/supabase-js";
-import { f as fail, r as redirect } from "../../../chunks/index2.js";
+import { f as fail, r as redirect } from "../../../chunks/index.js";
 const actions = {
   reset: async ({ request, locals }) => {
     const body = Object.fromEntries(await request.formData());
-    const { error: err } = await locals.sb.auth.resetPasswordForEmail(body.email, {
+    const { error: err } = await locals.supabase.auth.resetPasswordForEmail(body.email, {
       redirectTo: "https://resources.sparkstrategies.co/update-password"
     });
     if (err) {

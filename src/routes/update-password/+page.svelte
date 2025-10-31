@@ -19,16 +19,18 @@
 				<a href="/">
 					<img src={Logo} alt="Spark Strategies logo" class="w-16" />
 				</a>
-				<h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900">Create a new password</h2>
-				<p class="mt-2 text-sm text-gray-600">Please create a new password.</p>
-				<p class="mt-2 text-gray-600">Make sure you clicked on the link in your email!</p>
+				<h2 class="mt-6 text-3xl text-fadedBlack text-pretty">Create a new password</h2>
+				<p class="mt-2 text-fadedBlack text-pretty">Please create a new password.</p>
+				<p class="mt-2 text-fadedBlack text-pretty">
+					Make sure you clicked on the link in your email!
+				</p>
 			</div>
 
 			<div class="mt-8">
 				<div class="mt-6">
 					<form action="?/update" method="POST" class="space-y-6">
 						<div>
-							<label for="password" class="block text-sm font-medium text-sparkHeader"
+							<label for="password" class="block text-sm font-medium text-fadedBlack"
 								>Password</label
 							>
 							<div class="mt-1">
@@ -39,17 +41,17 @@
 									autocomplete="current-password"
 									required
 									placeholder="Must be at least 6 characters"
-									class="block w-full px-3 py-2 placeholder-gray-400 border border-sparkHeader/70 rounded-md shadow-sm appearance-none focus:border-sparkRaspberry focus:outline-none focus:ring-sparkRaspberry"
+									class="block w-full px-3 py-2 placeholder-gray-400 border border-fadedBlack/70 rounded-md shadow-sm appearance-none focus:border-fadedBlack focus:outline-none focus:ring-fadedBlack"
 								/>
 							</div>
 							{#if form}
-								<p class="text-red-600 font-semibold" />
-								<div class="rounded-md bg-red-50 p-4 mt-3">
+								<p class="text-fadedBlack font-semibold" />
+								<div class="rounded-md bg-fadedBlack p-4 mt-3">
 									<div class="flex">
 										<div class="flex-shrink-0">
 											<!-- Heroicon name: mini/x-circle -->
 											<svg
-												class="h-5 w-5 text-red-400"
+												class="h-5 w-5 text-fadedBlack"
 												xmlns="http://www.w3.org/2000/svg"
 												viewBox="0 0 20 20"
 												fill="currentColor"
@@ -63,7 +65,7 @@
 											</svg>
 										</div>
 										<div class="ml-3">
-											<h3 class="font-medium text-red-800">{form.fuck}</h3>
+											<h3 class="font-medium text-fadedBlack">{form.fuck}</h3>
 										</div>
 									</div>
 								</div>
@@ -72,7 +74,7 @@
 						<div>
 							<button
 								type="submit"
-								class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-sparkRaspberry hover:bg-[#DA1B28] focus:outline-none focus:ring-2 focus:ring-sparkRaspberry focus:ring-offset-2"
+								class="flex justify-center w-full px-4 py-2 font-medium text-fadedBlack border border-transparent rounded-md shadow-sm bg-warmWhite hover:bg-citrusOrange focus:outline-none focus:ring-2 focus:ring-fadedBlack focus:ring-offset-2"
 								>Submit</button
 							>
 						</div>

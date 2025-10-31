@@ -1,9 +1,9 @@
 import { AuthApiError } from "@supabase/supabase-js";
-import { f as fail, r as redirect } from "../../../chunks/index2.js";
+import { f as fail, r as redirect } from "../../../chunks/index.js";
 const actions = {
   update: async ({ request, locals }) => {
     const body = Object.fromEntries(await request.formData());
-    const { error: err } = await locals.sb.auth.updateUser({
+    const { error: err } = await locals.supabase.auth.updateUser({
       password: body.password
     });
     if (err) {

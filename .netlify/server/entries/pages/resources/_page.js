@@ -1,4 +1,4 @@
-import { r as redirect } from "../../../chunks/index2.js";
+import { r as redirect } from "../../../chunks/index.js";
 async function load({ parent }) {
   const { storyblokApi } = await parent();
   const { session } = await parent();

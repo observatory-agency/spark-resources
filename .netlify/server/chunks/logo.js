@@ -1,4 +1,4 @@
-const Logo = "/_app/immutable/assets/logo-4b746670.svg";
+const Logo = "/_app/immutable/assets/logo.3fc4b43d.svg";
 export {
   Logo as L
 };

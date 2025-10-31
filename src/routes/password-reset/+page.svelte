@@ -17,8 +17,8 @@
 				<a href="/">
 					<img src={Logo} alt="Spark Strategies logo" class="w-16" />
 				</a>
-				<h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900">Reset your password</h2>
-				<p class="mt-2 text-sm text-gray-600">
+				<h2 class="mt-6 text-3xl text-fadedBlack">Reset your password</h2>
+				<p class="mt-2 text-fadedBlack">
 					Enter your user account's verified email address and we will send you a password reset
 					link.
 				</p>
@@ -28,9 +28,7 @@
 				<div class="mt-6">
 					<form action="?/reset" method="POST" class="space-y-6">
 						<div>
-							<label for="email" class="block text-sm font-medium text-gray-700"
-								>Email address</label
-							>
+							<label for="email" class="block font-medium text-fadedBlack">Email address</label>
 							<div class="mt-1">
 								<input
 									id="email"
@@ -38,14 +36,14 @@
 									type="email"
 									autocomplete="email"
 									required
-									class="block w-full px-3 py-2 placeholder-gray-400 border border-sparkHeader/70 rounded-md shadow-sm appearance-none focus:border-sparkRaspberry focus:outline-none focus:ring-sparkRaspberry"
+									class="block w-full px-3 py-2 placeholder-gray-400 border border-fadedBlack/70 rounded-md shadow-sm appearance-none focus:border-fadedBlack focus:outline-none focus:ring-fadedBlack"
 								/>
 							</div>
 						</div>
 						<div>
 							<button
 								type="submit"
-								class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-sparkRaspberry hover:bg-[#DA1B28] focus:outline-none focus:ring-2 focus:ring-sparkRaspberry focus:ring-offset-2"
+								class="flex justify-center w-full px-4 py-2 font-medium text-white border border-transparent rounded-md shadow-sm bg-fadedBlack hover:bg-forestGreen focus:outline-none focus:ring-2 focus:ring-fadedBlack focus:ring-offset-2"
 								>Send password reset email</button
 							>
 						</div>

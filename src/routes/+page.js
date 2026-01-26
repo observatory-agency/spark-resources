@@ -1,18 +1,13 @@
-import { apiPlugin, storyblokInit, useStoryblokApi } from '@storyblok/svelte';
+import { getStoryblokApi } from '$lib/storyblok';
 
 export async function load() {
-    storyblokInit({
-        accessToken: 'qJMNGz9DE0CFLbx8xjnfzwtt',
-        use: [apiPlugin]
-    });
-
-    let storyblokApi = await useStoryblokApi();
+    const storyblokApi = await getStoryblokApi();
     const dataStory = await storyblokApi.get('cdn/stories/dashboard', {
         version: 'published'
     });
 
     return {
-        storyblokApi: storyblokApi,
+        storyblokApi,
         story: dataStory.data.story
     };
 }

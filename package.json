@@ -32,7 +32,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@storyblok/svelte": "^2.3.7",
-		"axios": "^0.27.2"
+		"@storyblok/svelte": "^2.3.7"
 	}
 }

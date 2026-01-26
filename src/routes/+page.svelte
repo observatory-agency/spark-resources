@@ -2,6 +2,7 @@
 	import Dashboard from '$lib/components/Dashboard.svelte';
 	import fullLogo from '$lib/logo-full.svg';
 	import Hero from '$lib/assets/hero.png';
+	import { FORMSPREE_NOTIFY_ENDPOINT } from '$lib/constants.js';
 
 	export let data;
 
@@ -118,7 +119,8 @@
 						<img
 							class="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
 							src={Hero}
-							alt=""
+							alt="Spark Resources dashboard preview"
+							loading="lazy"
 						/>
 					</div>
 				</div>
@@ -145,7 +147,8 @@
 							<img
 								class="absolute inset-0 object-cover w-full"
 								src="/resource-callout.jpg"
-								alt=""
+								alt="Boutique fitness studio interior"
+								loading="lazy"
 							/>
 							<div class="absolute inset-0 bg-fadedBlack mix-blend-multiply" />
 							<div
@@ -314,7 +317,7 @@
 							</p>
 						</div>
 						<form
-							action="https://formspree.io/f/xzbqeoeg"
+							action={FORMSPREE_NOTIFY_ENDPOINT}
 							method="POST"
 							class="mt-12 sm:mx-auto sm:flex sm:max-w-lg"
 						>

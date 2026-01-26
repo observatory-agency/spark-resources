@@ -1,8 +1,10 @@
 <script>
 	import { storyblokEditable, renderRichText } from '@storyblok/svelte';
+	import BoltIcon from '$lib/components/BoltIcon.svelte';
 	export let blok;
 
 	$: resolvedRichText = renderRichText(blok.description);
+	$: features = [blok.feature_1_copy, blok.feature_2_copy, blok.feature_3_copy, blok.feature_4_copy].filter(Boolean);
 </script>
 
 <div class="relative overflow-hidden isolate">
@@ -64,82 +66,16 @@
 				<dl
 					class="flex flex-col mx-auto text-base leading-7 text-sparkBody gap-x-6 gap-y-10 lg:mx-0"
 				>
-					<div class="relative pl-9">
-						<dt class="inline font-semibold text-white">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								class="absolute w-5 h-5 text-sparkOrange left-1 top-1"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-						</dt>
-						<dd class="inline text-lg">
-							{blok.feature_1_copy}
-						</dd>
-					</div>
-					<div class="relative pl-9">
-						<dt class="inline font-semibold text-white">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								class="absolute w-5 h-5 text-sparkOrange left-1 top-1"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-						</dt>
-						<dd class="inline text-lg">
-							{blok.feature_2_copy}
-						</dd>
-					</div>
-					<div class="relative pl-9">
-						<dt class="inline font-semibold text-white">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								class="absolute w-5 h-5 text-sparkOrange left-1 top-1"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-						</dt>
-						<dd class="inline text-lg">
-							{blok.feature_3_copy}
-						</dd>
-					</div>
-					<div class="relative pl-9">
-						<dt class="inline font-semibold text-white">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								class="absolute w-5 h-5 text-sparkOrange left-1 top-1"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-						</dt>
-						<dd class="inline text-lg">
-							{blok.feature_4_copy}
-						</dd>
-					</div>
+					{#each features as feature}
+						<div class="relative pl-9">
+							<dt class="inline font-semibold text-white">
+								<BoltIcon className="absolute w-5 h-5 text-sparkOrange left-1 top-1" />
+							</dt>
+							<dd class="inline text-lg">
+								{feature}
+							</dd>
+						</div>
+					{/each}
 				</dl>
 			</div>
 		</div>
@@ -152,10 +88,11 @@
 				>
 					<img
 						src={blok.image.filename}
-						alt="App screenshot"
+						alt={blok.image.alt || 'Feature screenshot'}
 						width="2432"
 						height="1442"
 						class="w-[46rem] h-[55rem] rounded-md object-cover shadow-2xl ring-1 ring-sparkRaspberry/40"
+						loading="lazy"
 					/>
 				</div>
 			</div>

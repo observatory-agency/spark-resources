@@ -1,19 +1,9 @@
-import { apiPlugin, storyblokInit, useStoryblokApi } from '@storyblok/svelte';
-import ResourceCard from '$storyblok/ResourceCard.svelte';
-import Dashboard from '$storyblok/Dashboard.svelte';
+import { getStoryblokApi } from '$lib/storyblok';
 
 export async function load() {
-    storyblokInit({
-        accessToken: 'qJMNGz9DE0CFLbx8xjnfzwtt',
-        use: [apiPlugin],
-        components: {
-            resource_card: ResourceCard,
-            Dashboard: Dashboard
-        }
-    });
-    let storyblokApi = await useStoryblokApi();
+    const storyblokApi = await getStoryblokApi();
 
     return {
-        storyblokApi: storyblokApi
+        storyblokApi
     };
 }

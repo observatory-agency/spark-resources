@@ -1,5 +1,6 @@
 <script>
 	import { storyblokEditable, renderRichText } from '@storyblok/svelte';
+	import { FORMSPREE_BASE_URL } from '$lib/constants.js';
 	export let blok;
 
 	$: resolvedRichText = renderRichText(blok.description);
@@ -46,7 +47,7 @@
 				{/if}
 				<p>{blok.form_description}</p>
 			</div>
-			<form action="https://formspree.io/f/{blok.form_id}" method="POST" class="space-y-6">
+			<form action="{FORMSPREE_BASE_URL}/{blok.form_id}" method="POST" class="space-y-6">
 				<div>
 					<label for="name" class="block text-sm font-medium text-left text-gray-700">Name</label>
 					<div class="mt-1">

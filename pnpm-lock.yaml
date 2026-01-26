@@ -10,10 +10,7 @@ importers:
     dependencies:
       '@storyblok/svelte':
         specifier: ^2.3.7
-        version: 2.5.0(axios@0.27.2)
-      axios:
-        specifier: ^0.27.2
-        version: 0.27.2
+        version: 2.5.0(axios@1.13.1)
     devDependencies:
       '@supabase/ssr':
         specifier: ^0.5.2
@@ -565,9 +562,6 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
-
-  axios@0.27.2:
-    resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
 
   axios@1.13.1:
     resolution: {integrity: sha512-hU4EGxxt+j7TQijx1oYdAjw4xuIp1wRQSsbMFwSthCWeBQur1eF+qJ5iQ5sN3Tw8YRzQNKb8jszgBdMDVqwJcw==}
@@ -1774,15 +1768,15 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@storyblok/js@1.8.6(axios@0.27.2)':
+  '@storyblok/js@1.8.6(axios@1.13.1)':
     dependencies:
-      storyblok-js-client: 4.5.8(axios@0.27.2)
+      storyblok-js-client: 4.5.8(axios@1.13.1)
     transitivePeerDependencies:
       - axios
 
-  '@storyblok/svelte@2.5.0(axios@0.27.2)':
+  '@storyblok/svelte@2.5.0(axios@1.13.1)':
     dependencies:
-      '@storyblok/js': 1.8.6(axios@0.27.2)
+      '@storyblok/js': 1.8.6(axios@1.13.1)
       svelte: 3.59.2
     transitivePeerDependencies:
       - axios
@@ -1968,13 +1962,6 @@ snapshots:
       picocolors: 1.1.1
       postcss: 8.5.6
       postcss-value-parser: 4.2.0
-
-  axios@0.27.2:
-    dependencies:
-      follow-redirects: 1.15.11(debug@4.4.3)
-      form-data: 4.0.4
-    transitivePeerDependencies:
-      - debug
 
   axios@1.13.1(debug@4.4.3):
     dependencies:
@@ -2711,9 +2698,9 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
-  storyblok-js-client@4.5.8(axios@0.27.2):
+  storyblok-js-client@4.5.8(axios@1.13.1):
     dependencies:
-      axios: 0.27.2
+      axios: 1.13.1(debug@4.4.3)
 
   string-width@4.2.3:
     dependencies:

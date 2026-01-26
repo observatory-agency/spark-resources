@@ -2,8 +2,6 @@
 	import Logo from '$lib/logo.svg';
 	import signIn from '$lib/assets/sign-in.jpg';
 	export let form;
-
-	console.log(form);
 </script>
 
 <svelte:head>
@@ -65,7 +63,7 @@
 											</svg>
 										</div>
 										<div class="ml-3">
-											<h3 class="font-medium text-fadedBlack">{form.fuck}</h3>
+											<h3 class="font-medium text-fadedBlack">{form.error}</h3>
 										</div>
 									</div>
 								</div>
@@ -84,6 +82,6 @@
 		</div>
 	</div>
 	<div class="relative flex-1 hidden w-0 lg:block">
-		<img class="absolute inset-0 object-cover w-full h-full" src={signIn} alt="" />
+		<img class="absolute inset-0 object-cover w-full h-full" src={signIn} alt="Fitness studio sign-in background" loading="lazy" />
 	</div>
 </div>

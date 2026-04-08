@@ -7,7 +7,6 @@ export async function load() {
     });
 
     return {
-        storyblokApi,
         story: dataStory.data.story
     };
 }

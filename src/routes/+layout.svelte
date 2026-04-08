@@ -9,17 +9,21 @@
 	$: ({ session } = data);
 
 	onMount(() => {
-		const {
-			data: { subscription }
-		} = supabase.auth.onAuthStateChange((_event, session) => {
-			if (session?.expires_at !== data?.session?.expires_at) {
-				invalidate('supabase:auth');
-			}
-		});
+		try {
+			const {
+				data: { subscription }
+			} = supabase.auth.onAuthStateChange((_event, session) => {
+				if (session?.expires_at !== data?.session?.expires_at) {
+					invalidate('supabase:auth');
+				}
+			});
 
-		return () => {
-			subscription.unsubscribe();
-		};
+			return () => {
+				subscription.unsubscribe();
+			};
+		} catch (e) {
+			console.error('Auth state listener failed:', e.message);
+		}
 	});
 </script>
 

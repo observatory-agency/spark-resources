@@ -1,6 +1,8 @@
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
 import { createServerClient } from '@supabase/ssr';
 
+const SESSION_TIMEOUT_MS = 3000;
+
 export const handle = async ({ event, resolve }) => {
     event.locals.supabase = createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
         cookies: {
@@ -15,10 +17,18 @@ export const handle = async ({ event, resolve }) => {
     });
 
     event.locals.getSession = async () => {
-        const {
-            data: { session }
-        } = await event.locals.supabase.auth.getSession();
-        return session;
+        try {
+            const result = await Promise.race([
+                event.locals.supabase.auth.getSession(),
+                new Promise((_, reject) =>
+                    setTimeout(() => reject(new Error('Session fetch timed out')), SESSION_TIMEOUT_MS)
+                )
+            ]);
+            return result.data.session;
+        } catch (e) {
+            console.error('getSession failed:', e.message);
+            return null;
+        }
     };
 
     return resolve(event, {

@@ -4,7 +4,12 @@
 	export let blok;
 
 	$: resolvedRichText = renderRichText(blok.description);
-	$: features = [blok.feature_1_copy, blok.feature_2_copy, blok.feature_3_copy, blok.feature_4_copy].filter(Boolean);
+	$: features = [
+		blok.feature_1_copy,
+		blok.feature_2_copy,
+		blok.feature_3_copy,
+		blok.feature_4_copy
+	].filter(Boolean);
 </script>
 
 <div class="relative overflow-hidden isolate">
@@ -51,25 +56,25 @@
 				></svg
 			>
 
-			<h1 class="mt-10 text-4xl font-bold tracking-tight text-sparkHeader sm:text-6xl">
+			<h1 class="mt-10 text-4xl font-bold tracking-tight text-fadedBlack sm:text-6xl">
 				{blok.title}
 			</h1>
-			<p class="mt-6 text-lg leading-8 text-sparkBody">{@html resolvedRichText}</p>
+			<p class="mt-6 text-lg leading-8 text-fadedBlack">{@html resolvedRichText}</p>
 			<div class="flex justify-start mt-10 gap-x-6">
 				<a
 					href={blok.button_link.url}
-					class="inline-block max-w-[224px] px-6 py-3 text-base font-medium text-center text-white border border-transparent rounded-md shadow bg-sparkRaspberry hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:px-10"
+					class="inline-block max-w-[224px] px-6 py-3 text-base font-medium text-center text-white border border-transparent rounded-md shadow bg-fadedBlack hover:bg-forestGreen focus:outline-none focus:ring-2 focus:ring-fadedBlack focus:ring-offset-2 sm:px-10"
 					>{blok.button_text}</a
 				>
 			</div>
 			<div class="max-w-md mt-16 sm:mt-20">
 				<dl
-					class="flex flex-col mx-auto text-base leading-7 text-sparkBody gap-x-6 gap-y-10 lg:mx-0"
+					class="flex flex-col mx-auto text-base leading-7 text-fadedBlack gap-x-6 gap-y-10 lg:mx-0"
 				>
 					{#each features as feature}
 						<div class="relative pl-9">
 							<dt class="inline font-semibold text-white">
-								<BoltIcon className="absolute w-5 h-5 text-sparkOrange left-1 top-1" />
+								<BoltIcon className="absolute w-5 h-5 text-neonGreen left-1 top-1" />
 							</dt>
 							<dd class="inline text-lg">
 								{feature}
@@ -84,14 +89,14 @@
 		>
 			<div class="flex-none max-w-3xl sm:max-w-5xl lg:max-w-none">
 				<div
-					class="p-2 -m-2 rounded-xl bg-sparkRaspberry/40 ring-1 ring-inset ring-sparkOrange/50 lg:-m-4 lg:rounded-2xl lg:p-4"
+					class="p-2 -m-2 rounded-xl bg-neonGreen/40 ring-1 ring-inset ring-neonGreen/50 lg:-m-4 lg:rounded-2xl lg:p-4"
 				>
 					<img
 						src={blok.image.filename}
 						alt={blok.image.alt || 'Feature screenshot'}
 						width="2432"
 						height="1442"
-						class="w-[46rem] h-[55rem] rounded-md object-cover shadow-2xl ring-1 ring-sparkRaspberry/40"
+						class="w-[46rem] h-[55rem] rounded-md object-cover shadow-2xl ring-1 ring-neonGreen/40"
 						loading="lazy"
 					/>
 				</div>

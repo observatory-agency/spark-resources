@@ -12,6 +12,12 @@ module.exports = {
                 lightOrange: '#FEB07F',
                 forestGreen: '#2D3D07',
                 warmWhite: '#FFFEEB',
+                sparkPeach: '#FFFEEB',
+                sparkHeader: '#262824',
+                sparkBody: '#262824',
+                sparkRaspberry: '#262824',
+                sparkOrange: '#F9773E',
+                sparkBlue: '#2D3D07',
             },
             fontFamily: {
                 display: ['Anton', 'sans-serif'],

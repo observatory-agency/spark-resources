@@ -6,7 +6,7 @@
 </script>
 
 <section use:storyblokEditable={blok}>
-	<div class="relative py-24 overflow-hidden bg-gray-900 isolate sm:py-32">
+	<div class="relative py-24 overflow-hidden bg-fadedBlack isolate sm:py-32">
 		<img
 			src={blok.background_image.filename}
 			alt=""
@@ -65,11 +65,11 @@
 				{#if blok.announcement_text}
 					<div class="hidden sm:mb-8 sm:flex sm:justify-center">
 						<div
-							class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+							class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-warmWhite/20 hover:ring-warmWhite/40"
 						>
-							<span class="text-gray-600">
+							<span class="text-warmWhite/70">
 								{blok.announcement_text}
-								<a href={blok.announcement_link} class="font-semibold text-indigo-600"
+								<a href={blok.announcement_link} class="font-semibold text-neonGreen"
 									><span class="absolute inset-0" aria-hidden="true" />{blok.announcement_link_text}
 									<span aria-hidden="true">&rarr;</span></a
 								>
@@ -80,7 +80,7 @@
 				<h2 class="text-4xl font-bold tracking-tight text-center text-white sm:text-6xl">
 					{blok.title}
 				</h2>
-				<p class="mt-6 text-lg leading-8 text-center text-gray-300">
+				<p class="mt-6 text-lg leading-8 text-center text-warmWhite/80">
 					{@html resolvedRichText}
 				</p>
 			</div>

@@ -10,8 +10,8 @@
 				<img src={blok.image.filename} alt={blok.title} />
 			</div>
 			<div class="p-6 space-y-2">
-				<h4 class="text-xl font-medium text-sparkHeader">{blok.title}</h4>
-				<p class="text-3xl font-bold text-sparkBlue font-display">{blok.price}</p>
+				<h4 class="text-xl font-medium text-fadedBlack">{blok.title}</h4>
+				<p class="text-3xl font-bold text-forestGreen font-display">{blok.price}</p>
 			</div>
 		</div>
 	</a>

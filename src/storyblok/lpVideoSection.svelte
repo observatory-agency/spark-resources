@@ -7,10 +7,10 @@
 	<div class="pt-12 {blok.spacing === 'small' ? 'sm:pt-16' : 'sm:pt-32'}">
 		<div class="max-w-md px-6 mx-auto text-center sm:max-w-3xl lg:max-w-screen-2xl lg:px-8">
 			<div>
-				<h2 class="mt-2 text-3xl font-bold tracking-tight text-sparkHeader sm:text-4xl">
+				<h2 class="mt-2 text-3xl font-bold tracking-tight text-fadedBlack sm:text-4xl">
 					{blok.title}
 				</h2>
-				<p class="mx-auto mt-5 text-xl text-sparkBody/80 max-w-prose">
+				<p class="mx-auto mt-5 text-xl text-fadedBlack/80 max-w-prose">
 					{blok.description}
 				</p>
 			</div>

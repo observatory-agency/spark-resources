@@ -7,7 +7,7 @@
 	<div class="relative sm:py-16">
 		<div class="md:max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
 			<div
-				class="relative px-6 py-10 overflow-hidden shadow-xl rounded-2xl bg-sparkRaspberry sm:px-12 sm:py-20"
+				class="relative px-6 py-10 overflow-hidden shadow-xl rounded-2xl bg-fadedBlack sm:px-12 sm:py-20"
 			>
 				<div aria-hidden="true" class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
 					<svg
@@ -18,12 +18,12 @@
 						viewBox="0 0 1463 360"
 					>
 						<path
-							class="text-sparkHeader text-opacity-40"
+							class="text-fadedBlack text-opacity-40"
 							fill="currentColor"
 							d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z"
 						/>
 						<path
-							class="text-sparkHeader text-opacity-10"
+							class="text-fadedBlack text-opacity-10"
 							fill="currentColor"
 							d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z"
 						/>
@@ -31,16 +31,16 @@
 				</div>
 				<div class="relative flex flex-col items-center space-y-10">
 					<div class="sm:text-center">
-						<h2 class="text-2xl font-bold tracking-tight text-sparkPeach sm:text-4xl">
+						<h2 class="text-2xl font-bold tracking-tight text-warmWhite sm:text-4xl">
 							{blok.title}
 						</h2>
-						<p class="max-w-2xl mx-auto leading-normal mt-4 lg:text-lg text-sparkPeach/90">
+						<p class="max-w-2xl mx-auto leading-normal mt-4 lg:text-lg text-warmWhite/90">
 							{blok.description}
 						</p>
 					</div>
 					<a
 						href={blok.button_link.url}
-						class="inline-block px-5 py-3 mx-auto text-base font-medium border border-transparent rounded-md shadow bg-sparkOrange text-sparkPeach hover:bg-sparkOrange/90 focus:outline-none focus:ring-2 focus:ring-sparkPeach focus:ring-offset-2 focus:ring-offset-sparkRaspberry sm:px-10"
+						class="inline-block px-5 py-3 mx-auto text-base font-medium border border-transparent rounded-md shadow bg-warmWhite text-fadedBlack hover:bg-citrusOrange focus:outline-none focus:ring-2 focus:ring-warmWhite focus:ring-offset-2 focus:ring-offset-fadedBlack sm:px-10"
 						>{blok.button_text}</a
 					>
 				</div>

@@ -4,7 +4,7 @@
 </script>
 
 {#key blok}
-	<section use:storyblokEditable={blok} class="relative overflow-hidden space-y-24">
+	<section use:storyblokEditable={blok} class="relative space-y-24">
 		{#each blok.body as blok}
 			<StoryblokComponent {blok} />
 		{/each}
